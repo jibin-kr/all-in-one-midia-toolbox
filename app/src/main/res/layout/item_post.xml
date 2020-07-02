@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/post_user_image"
+            android:layout_width="30dp"
+            app:srcCompat="@drawable/ic_person"
+            android:layout_centerVertical="true"
+            android:layout_height="30dp"
+            tools:ignore="VectorDrawableCompat" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/post_user_image"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/post_user_image">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/post_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\@username"
+                android:textStyle="bold"
+                android:textColor="?android:textColorPrimary"
+                tools:ignore="MissingPrefix" />
+
+            <TextView
+                android:text="1m ago"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/delete_button"
+                android:id="@+id/post_timestamp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/post_username"
+                android:layout_width="wrap_content"
+                android:gravity="end"
+                android:visibility="invisible"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingPrefix"
+                android:layout_toLeftOf="@+id/delete_button"
+                android:layout_toRightOf="@id/post_username" />
+
+            <ImageView
+                android:id="@+id/delete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="1dp"
+                app:srcCompat="@drawable/ic_delete_black_24dp"
+                android:layout_alignParentRight="true"
+                tools:ignore="VectorDrawableCompat" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.glofora.whatstus.AdaptableViewPager
+                android:id="@+id/pager"
+                android:layout_gravity="top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:visibility="visible"
+            android:id="@+id/indicator_holder"
+            android:background="#30000000"
+            android:layout_gravity="bottom"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:dotsColor="#FFF"
+                app:dotsCornerRadius="8dp"
+                app:dotsSize="6dp"
+                app:dotsSpacing="4dp"
+                app:dotsWidthFactor="2.5"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:id="@+id/buttonsLayout"
+           android:layout_gravity="end"
+           android:orientation="horizontal"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+
+           <Button
+               android:id="@+id/copy"
+               android:text="Copy Caption"
+               style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+               android:layout_marginEnd="10dp"
+               android:textColor="@color/colorBlack"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="10dp"
+               android:paddingLeft="10dp"
+               android:paddingRight="10dp"
+            />
+
+           <Button
+               android:id="@+id/download"
+               android:layout_gravity="end"
+               style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+               android:text="Download"
+               android:textColor="@color/colorBlack"
+
+               android:layout_marginEnd="10dp"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginRight="10dp"
+               android:paddingLeft="10dp"
+               android:paddingRight="10dp"
+         />
+
+       </LinearLayout>
+
+        <TextView
+            android:id="@+id/post_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="?android:textColorPrimary"
+            android:visibility="visible" />
+
+    </FrameLayout>
+
+</LinearLayout>

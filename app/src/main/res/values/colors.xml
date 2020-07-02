@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#078470</color>
+
+    <color name="colorPrimaryDark">#005645</color>
+    <color name="colorAccent">#c1009d</color>
+    <color name="colorPrimaryLight">#ffffff</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="black_translucent">#50000000</color>
+    <color name="nav_icon_color">#889198</color>
+    <color name="nav_item_color">#444444</color>
+
+    <color name="instaAccent">#405DE6</color>
+    <color name="whatsappAccent">#25D366</color>
+    <color name="youtubeAccent">#F44336</color>
+    <color name="commonToolAccent">#FC6D55</color>
+    <color name="white">#FFF</color>
+    <color name="bottomSheetBg">#212121</color>
+    <color name="toolbarColor">#FFF</color>
+    <color name="tranluentTextColor">#80000000</color>
+    <color name="gallerybar">#2196f3</color>
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="circular_progress">#1dc111</color>
+    <color name="colorGrayTrans">#c46c6c6c</color>
+r>
+</resources>

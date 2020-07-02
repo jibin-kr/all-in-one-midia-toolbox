@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+<!--        <item-->
+<!--            android:id="@+id/nav_whatsapp"-->
+<!--            android:icon="@drawable/whatsapp"-->
+<!--            android:title="Whatsapp Status" />-->
+<!--        <item-->
+<!--            android:id="@+id/nav_business"-->
+<!--            android:icon="@drawable/business_notif"-->
+<!--            android:title="Business Whatsapp" />-->
+<!--                <item-->
+<!--                    android:id="@+id/nav_splitter"-->
+<!--                    android:icon="@drawable/ic_video_editing"-->
+<!--                    android:title="Video Splitter" />-->
+            <group
+                android:id="@+id/instagram_groups"
+                android:checkableBehavior="none"
+                >
+        <item android:id="@+id/insta"
+
+            android:title="Instagram Repost"
+            android:icon="@drawable/repost"
+            />
+        <item android:id="@+id/insta_recents"
+
+            android:title="Instagram Recents"
+            android:icon="@drawable/ic_update_white_24dp"
+            />
+        <item android:id="@+id/insta_hd_profile_pic"
+
+            android:title="HD Profile Pic"
+            android:icon="@drawable/ic_crop_white_24dp"
+            />
+
+
+            </group>
+<!--    <group android:checkableBehavior="single">-->
+        <item
+            android:icon="@drawable/rate" android:title="RATE APP"/>
+    <item
+        android:id="@+id/id_github"
+        android:icon="@drawable/ic_github" android:title="Open Source"/>
+
+<!--    </group>-->
+
+</menu>

@@ -1,0 +1,105 @@
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.glofora.whatstus.StatusSaverActivity" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="25dp"
+                tools:ignore="MissingConstraints">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_Whatsapp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WhatsApp"
+                        android:layout_marginEnd="15dp"
+                        android:textColor="@color/colorPrimary"
+                        app:useMaterialThemeColors="true"
+                        android:textAllCaps="true"
+                        android:checked="true"/>
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_Instagram"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:useMaterialThemeColors="true"
+                        android:text="Other Apps"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimary" />
+                </RadioGroup>
+                <Space
+                    android:layout_width="30dp"
+                    android:layout_height="15dp"/>
+                <TextView
+                    android:id="@+id/help_msg_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select time(In Seconds) of video slice as you want. \nEg. For Whatsapp Status : 30 Seconds"
+                    android:textAllCaps="false"
+                    android:textAlignment="center">
+
+                </TextView>
+                <Space
+                    android:layout_width="30dp"
+                    android:layout_height="10dp"/>
+                <com.shawnlin.numberpicker.NumberPicker
+                    android:id="@+id/number_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    app:np_dividerColor="@color/black_translucent"
+                    app:np_max="59"
+                    app:np_min="15"
+                    app:np_width="64dp"
+                    app:np_selectedTextColor="@color/colorAccent"
+                    app:np_textColor="@color/colorPrimary"
+                    app:np_value="15" />
+
+                <Space
+                    android:layout_width="30dp"
+                    android:layout_height="10dp"/>
+                <Button
+                    android:id="@+id/cameraButton"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Record Video"
+                    android:padding="15dp"
+                    android:textAllCaps="true"
+                    />
+
+                <Space
+                    android:layout_width="30dp"
+                    android:layout_height="15dp"/>
+
+                <Button
+                    android:id="@+id/galleryButton"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select From Gallery"
+                    android:padding="15dp"
+                    android:textAllCaps="true" />
+
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>

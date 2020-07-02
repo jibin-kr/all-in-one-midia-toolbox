@@ -1,0 +1,41 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_wa_video"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.glofora.whatstus.fragments.wa.WAImageFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/ref_wa_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundTint="@color/colorPrimary">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_wa_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar_wa_video"
+        android:layout_gravity="center"
+        android:visibility="visible"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/wa_video_fab_save_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        app:backgroundTint="@color/colorAccent"
+        app:rippleColor="@color/colorPrimaryDark"
+        app:tint="@color/colorWhite"
+        android:src="@drawable/ic_save_white_24dp"
+        android:layout_margin="16dp" />
+
+</FrameLayout>

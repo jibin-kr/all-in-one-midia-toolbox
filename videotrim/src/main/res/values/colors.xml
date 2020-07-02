@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1cb39b</color>
+
+    <!-- VIDEO TRIMMER -->
+    <color name="background_video_color">#2F3031</color>
+    <color name="background_progress_color">#6C6D6D</color>
+    <color name="progress_color">@color/colorPrimary</color>
+    <color name="line_color">#FF15FF00</color>
+    <color name="shadow_color">#ffffff</color>
+    <color name="black_translucent">#50000000</color>
+    <color name="primary_light">#ffffff</color>
+</resources>

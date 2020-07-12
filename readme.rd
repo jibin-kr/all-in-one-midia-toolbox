@@ -1,1 +1,1 @@
-glofors solutions
+glofora solutions

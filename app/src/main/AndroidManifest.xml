@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.glofora.whatstus">
+    package="com.glofora.whatstustoolbox">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -33,26 +33,26 @@
         </provider>
 
         <activity
-            android:name="com.glofora.whatstus.StatusSaverActivity"
+            android:name="com.glofora.whatstustoolbox.StatusSaverActivity"
             android:screenOrientation="portrait">
         </activity>
 
         <activity
-            android:name="com.glofora.whatstus.VideoSplitterActivity"
+            android:name="com.glofora.whatstustoolbox.VideoSplitterActivity"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.glofora.whatstus.viewer.ImageViewer" />
-        <activity android:name="com.glofora.whatstus.viewer.VideoPlayer" />
+        <activity android:name="com.glofora.whatstustoolbox.viewer.ImageViewer" />
+        <activity android:name="com.glofora.whatstustoolbox.viewer.VideoPlayer" />
         <activity
-            android:name="com.glofora.whatstus.activity.RecentsActivity"
+            android:name="com.glofora.whatstustoolbox.activity.RecentsActivity"
             android:screenOrientation="portrait"
             android:exported="false"/>
         <activity
-            android:name="com.glofora.whatstus.activity.RepostActivity"
+            android:name="com.glofora.com.glofora.whatstustoolbox.activity.RepostActivity"
             android:screenOrientation="portrait"
             android:exported="false"/>
         <activity
-            android:name="com.glofora.whatstus.activity.SplashActivity"
+            android:name="com.glofora.whatstustoolbox.activity.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:theme="@style/FullscreenTheme">
@@ -63,7 +63,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.glofora.whatstus.VideoPlayerActivity"
+            android:name="com.glofora.whatstustoolbox.VideoPlayerActivity"
             android:theme="@style/AppThemeWithActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
@@ -73,13 +73,13 @@
                 <data android:mimeType="video/*" />
             </intent-filter>
         </activity>
-        <activity android:name="com.glofora.whatstus.TrimmerActivity"
+        <activity android:name="com.glofora.whatstustoolbox.TrimmerActivity"
             android:theme="@style/AppThemeWithActionBar">
 
         </activity>
 
         <activity
-            android:name="com.glofora.whatstus.activity.HDPictureActivity"
+            android:name="com.glofora.whatstustoolbox.activity.HDPictureActivity"
             android:screenOrientation="portrait"
             android:exported="false"/>
         <activity
@@ -96,16 +96,16 @@
             <data android:mimeType="text/plain" />
         </intent-filter>
         </activity>
-        <activity android:name="com.glofora.whatstus.activity.VideoDownloaderDialogActivity"
+        <activity android:name="com.glofora.whatstustoolbox.activity.VideoDownloaderDialogActivity"
             android:label="Download Video"
             android:theme="@style/Theme.AppCompat.DayNight.Dialog.Alert"/>
-        <activity android:name="com.glofora.whatstus.VideoDownloadActivity"/>
+        <activity android:name="com.glofora.whatstustoolbox.VideoDownloadActivity"/>
 
-        <service android:name="com.glofora.whatstus.service.NotificationService"
+        <service android:name="com.glofora.whatstustoolbox.service.NotificationService"
             />
 
         <receiver
-            android:name="com.glofora.whatstus.service.reciever.BootReceiver"
+            android:name="com.glofora.whatstustoolbox.service.reciever.BootReceiver"
             android:enabled="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -115,7 +115,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.glofora.whatstus.service.reciever.NotificationReceiver"
+            android:name="com.glofora.whatstustoolbox.service.reciever.NotificationReceiver"
             android:enabled="false"
             android:exported="false"/>
     </application>

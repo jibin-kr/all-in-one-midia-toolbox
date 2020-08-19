@@ -44,7 +44,7 @@ public class BWAFragment extends Fragment {
         viewPager.setOffscreenPageLimit(2);
         ViewPagerWAAdapter adapter = new ViewPagerWAAdapter(getChildFragmentManager());
         adapter.addTabs("Status",new BWAImageFragment());
-        adapter.addTabs("Status",new WAVideoFragment());
+        adapter.addTabs("Status",new BWAVideoFragment());
         adapter.addTabs("Saved",new SavedFilesFragment());
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(1);

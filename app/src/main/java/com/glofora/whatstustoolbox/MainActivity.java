@@ -210,6 +210,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
                         return;
                     case "Video Downloader":
                         startActivity(new Intent(MainActivity.this, VideoDownloadActivity.class));
+                        return;
                     case "Gallery":
                     {
                         String[] PERMISSIONS = {
@@ -320,23 +321,23 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
         cardList.clear();
 
-        Card card=new Card("Repost",R.mipmap.repost,R.drawable.ic_instagram_black_256,R.color.commonToolAccent);
+        Card card=new Card("Repost",R.mipmap.repost,R.drawable.ic_instagram_black_256,R.color.colorOrange);
         cardList.add(card);
 
-        card=new Card("HD Profile Picture",R.mipmap.crop,R.drawable.ic_instagram_black_256,R.color.instaAccent);
+        card=new Card("HD Profile Picture",R.mipmap.crop,R.drawable.ic_instagram_black_256,R.color.colorYellow);
         cardList.add(card);
 
-        card=new Card("Status Saver",R.mipmap.save_status,R.drawable.ic_whatsapp_black_256,R.color.whatsappAccent);
+        card=new Card("Status Saver",R.mipmap.save_status,R.drawable.ic_whatsapp_black_256,R.color.colorGreen);
         cardList.add(card);
 
         if(num<=0){
-            card=new Card("Video Downloader",R.mipmap.download_video,R.drawable.ic_youtube_black_256,R.color.youtubeAccent);
+            card=new Card("Video Downloader",R.mipmap.download_video,R.drawable.ic_youtube_black_256,R.color.colorRed);
             cardList.add(card);
         }
 
-        card=new Card("Video Splitter",R.drawable.ic_edit_video_black_21,R.drawable.ic_cinema_black_256,R.color.youtubeAccent);
+        card=new Card("Video Splitter",R.drawable.ic_edit_video_black_21,R.drawable.ic_cinema_black_256,R.color.colorBlue);
         cardList.add(card);
-        card=new Card("Gallery",R.drawable.ic_gallery_black_24dp,R.drawable.ic_photo_library_black_256,R.color.gallerybar);
+        card=new Card("Gallery",R.drawable.ic_gallery_black_24dp,R.drawable.ic_photo_library_black_256,R.color.colorLightBlack);
         cardList.add(card);
         
         cardsAdapter.notifyDataSetChanged();
@@ -345,7 +346,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
     public void unlockYoutube(View view) {
 
         Animation animation=AnimationUtils.loadAnimation(this,R.anim.shake);
-        findViewById(R.id.top).startAnimation(animation);
+        findViewById(R.id.nav_view).startAnimation(animation);
 
         if(num==0){
             sharedPreferences.edit().putInt("clicks",--num).apply();

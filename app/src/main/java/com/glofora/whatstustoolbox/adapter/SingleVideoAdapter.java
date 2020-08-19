@@ -133,7 +133,7 @@ public class SingleVideoAdapter extends RecyclerView.Adapter<SingleVideoAdapter.
         String directory;
         File storageDir;
 
-        directory=context.getSharedPreferences("directory",MODE_PRIVATE).getString("path",Environment.getExternalStorageDirectory()+"/Media Toolbox/");
+        directory=context.getSharedPreferences("directory",MODE_PRIVATE).getString("path",Environment.getExternalStorageDirectory()+"/Whatstus/");
         storageDir = new File(directory + "/Youtube/Thumbnails/");
 
         if (!storageDir.exists()) {

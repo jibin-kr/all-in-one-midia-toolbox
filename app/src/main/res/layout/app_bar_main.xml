@@ -27,6 +27,8 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:overScrollMode="never"
@@ -38,6 +40,8 @@
                 app:layout_constraintTop_toBottomOf="@id/appbar_layout"
                 android:layout_width="0dp"
                 android:layout_height="0dp"/>
+
+
 
 
 

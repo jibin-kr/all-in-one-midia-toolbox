@@ -19,6 +19,7 @@ import com.glofora.whatstustoolbox.adapter.VideoAdapter;
 import com.glofora.whatstustoolbox.models.Repost;
 import com.glofora.whatstustoolbox.models.Video;
 import com.glofora.whatstustoolbox.room.PostsDatabase;
+import com.glofora.whatstustoolbox.room.VideoDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -112,7 +113,38 @@ public class RecentsActivity extends AppCompatActivity {
                         });
 
                 break;
+            case "youtube":
 
+                videoList=new ArrayList<>();
+                videoAdapter=new VideoAdapter(videoList,this, defaultLayout);
+                recyclerView.setAdapter(videoAdapter);
+
+                Single<List<Video>> video_single= VideoDatabase.getInstance(this).videoDao().getAll();
+                video_single.subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(new SingleObserver<List<Video>>() {
+                            @Override
+                            public void onSubscribe(Disposable d) {
+
+                            }
+
+                            @Override
+                            public void onSuccess(List<Video> videos) {
+                                if(videos.isEmpty()){
+                                    defaultLayout.setVisibility(View.VISIBLE);
+                                }
+                                for(Video video: videos){
+                                    videoList.add(0,video);
+                                }
+                                videoAdapter.notifyDataSetChanged();
+                            }
+
+                            @Override
+                            public void onError(Throwable e) {
+
+                            }
+                        });
+                break;
             default:
                 finish();
         }

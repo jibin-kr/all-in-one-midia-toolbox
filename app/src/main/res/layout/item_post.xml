@@ -128,51 +128,73 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
-       <LinearLayout
-           android:id="@+id/buttonsLayout"
-           android:layout_gravity="end"
-           android:orientation="horizontal"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_gravity="end"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-           <Button
-               android:id="@+id/copy"
-               android:text="Copy Caption"
-               style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-               android:layout_marginEnd="10dp"
-               android:textColor="@color/colorBlack"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_marginRight="10dp"
-               android:paddingLeft="10dp"
-               android:paddingRight="10dp"
+        <Button
+            android:id="@+id/copy"
+            android:text="Share Caption"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/colorBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             />
 
-           <Button
-               android:id="@+id/download"
-               android:layout_gravity="end"
-               style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-               android:text="Download"
-               android:textColor="@color/colorBlack"
+        <Button
+            android:id="@+id/download"
+            android:layout_gravity="end"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:text="Download"
+            android:textColor="@color/colorBlack"
 
-               android:layout_marginEnd="10dp"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_marginRight="10dp"
-               android:paddingLeft="10dp"
-               android:paddingRight="10dp"
-         />
-
-       </LinearLayout>
-
-        <TextView
-            android:id="@+id/post_desc"
-            android:layout_width="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textColor="?android:textColorPrimary"
-            android:visibility="visible" />
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/post_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="?android:textColorPrimary"
+        android:visibility="visible"
+        android:enabled="true"
+        android:textIsSelectable="true"
+        android:focusable="true"
+        android:longClickable="true"/>
+    <com.abdulhakeem.seemoretextview.SeeMoreTextView
+        android:id="@+id/post_desc_recents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="?android:textColorPrimary"
+        android:visibility="invisible"
+        android:enabled="true"
+        android:textIsSelectable="true"
+        android:focusable="true"
+        android:longClickable="true"
+
+	/>
+</LinearLayout>
+
 
     </FrameLayout>
 

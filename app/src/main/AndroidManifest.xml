@@ -48,7 +48,7 @@
             android:screenOrientation="portrait"
             android:exported="false"/>
         <activity
-            android:name="com.glofora.com.glofora.whatstustoolbox.activity.RepostActivity"
+            android:name="com.glofora.whatstustoolbox.activity.RepostActivity"
             android:screenOrientation="portrait"
             android:exported="false"/>
         <activity

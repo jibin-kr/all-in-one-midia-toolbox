@@ -21,6 +21,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.glofora.whatstustoolbox.activity.RecentsActivity;
+import com.glofora.whatstustoolbox.activity.RepostActivity;
 import com.glofora.whatstustoolbox.adapter.SingleVideoAdapter;
 import com.glofora.whatstustoolbox.models.Video;
 import com.glofora.whatstustoolbox.room.VideoDatabase;
@@ -55,15 +56,16 @@ public class VideoDownloadActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater=getMenuInflater();
-        menuInflater.inflate(R.menu.recents_menu,menu);
+        menuInflater.inflate(R.menu.youtube_recnet_menu,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId()==R.id.recents){
-            startActivity(new Intent(this, RecentsActivity.class).putExtra("type","youtube"));
+            startActivity(new Intent(VideoDownloadActivity.this, RecentsActivity.class).putExtra("type","youtube"));
         }
+
         return super.onOptionsItemSelected(item);
     }
 

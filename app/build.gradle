@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId "com.glofora_status_video_spliter"
         minSdkVersion 19
-        targetSdkVersion 28
-        versionCode 17
-        versionName "1.187"
+        targetSdkVersion 29
+        versionCode 19
+        versionName "1.190"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -78,5 +78,6 @@ dependencies {
     implementation 'com.flaviofaria:kenburnsview:1.0.7'
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.AhmMhd:SeeMoreTextView-Android:1.0.0'
     implementation project(':videotrim')
 }

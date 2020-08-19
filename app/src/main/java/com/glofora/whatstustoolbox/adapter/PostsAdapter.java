@@ -25,6 +25,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 
+import com.abdulhakeem.seemoretextview.SeeMoreTextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
@@ -162,53 +163,56 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
                         if(success){
                             File imageFile = new File(storageDir, fileName);
                             if(imageFile.exists()){
-                                Toast.makeText(context, "File already exists..", Toast.LENGTH_SHORT).show();
-                                return;
+                                Toast.makeText(context, "Some Files already exists..", Toast.LENGTH_SHORT).show();
+
                             }
-                            final DownloadInfo downloadInfo = new DownloadInfo.Builder().setUrl(url)
-                                    .setPath(imageFile.getAbsolutePath())
-                                    .build();
-                            downloadInfo.setDownloadListener(new DownloadListener() {
-                                @Override
-                                public void onStart() { }
+                          else
+                            {
+                                final DownloadInfo downloadInfo = new DownloadInfo.Builder().setUrl(url)
+                                        .setPath(imageFile.getAbsolutePath())
+                                        .build();
+                                downloadInfo.setDownloadListener(new DownloadListener() {
+                                    @Override
+                                    public void onStart() { }
 
-                                @Override
-                                public void onWaited() { }
+                                    @Override
+                                    public void onWaited() { }
 
-                                @Override
-                                public void onPaused() { }
+                                    @Override
+                                    public void onPaused() { }
 
-                                @Override
-                                public void onDownloading(long progress, long size) {
-                                    notificationUtils.showNotification(downloadInfo.hashCode(),downloadInfo.getId(),"Downloading "+fileName,"Downloaded "+formatFileSize(progress)+"/"+formatFileSize(size),true, null);
-                                }
+                                    @Override
+                                    public void onDownloading(long progress, long size) {
+                                        notificationUtils.showNotification(downloadInfo.hashCode(),downloadInfo.getId(),"Downloading "+fileName,"Downloaded "+formatFileSize(progress)+"/"+formatFileSize(size),true, null);
+                                    }
 
-                                @Override
-                                public void onRemoved() {
-                                    NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
-                                    notificationManager.cancel(downloadInfo.hashCode());
-                                }
+                                    @Override
+                                    public void onRemoved() {
+                                        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
+                                        notificationManager.cancel(downloadInfo.hashCode());
+                                    }
 
-                                @Override
-                                public void onDownloadSuccess() {
-                                    Intent intent=new Intent();
-                                    intent.setAction(Intent.ACTION_VIEW);
-                                    Uri uri= FileProvider.getUriForFile(context,context.getPackageName()+".provider",imageFile);
-                                    intent.setDataAndType(uri,"image/*");
-                                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                                    PendingIntent pendingIntent=PendingIntent.getActivity(context,0,intent,0);
-                                    galleryAddPic(imageFile);
-                                    Toast.makeText(context, "Download Completed", Toast.LENGTH_SHORT).show();
-                                    notificationUtils.showNotification(downloadInfo.hashCode(),downloadInfo.getId(),"Download successful","Downloaded "+fileName,false,pendingIntent);
-                                }
+                                    @Override
+                                    public void onDownloadSuccess() {
+                                        Intent intent=new Intent();
+                                        intent.setAction(Intent.ACTION_VIEW);
+                                        Uri uri= FileProvider.getUriForFile(context,context.getPackageName()+".provider",imageFile);
+                                        intent.setDataAndType(uri,"image/*");
+                                        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                                        PendingIntent pendingIntent=PendingIntent.getActivity(context,0,intent,0);
+                                        galleryAddPic(imageFile);
+                                        Toast.makeText(context, "Download Completed", Toast.LENGTH_SHORT).show();
+                                        notificationUtils.showNotification(downloadInfo.hashCode(),downloadInfo.getId(),"Download successful","Downloaded "+fileName,false,pendingIntent);
+                                    }
 
-                                @Override
-                                public void onDownloadFailed(DownloadException e) {
-                                    Toast.makeText(context, "Download Failed", Toast.LENGTH_SHORT).show();
-                                    notificationUtils.showNotification(downloadInfo.hashCode(),downloadInfo.getId(),"Download failed","Couldn't download "+fileName,false, null);
-                                }
-                            });
-                            downloadManager.download(downloadInfo);
+                                    @Override
+                                    public void onDownloadFailed(DownloadException e) {
+                                        Toast.makeText(context, "Download Failed", Toast.LENGTH_SHORT).show();
+                                        notificationUtils.showNotification(downloadInfo.hashCode(),downloadInfo.getId(),"Download failed","Couldn't download "+fileName,false, null);
+                                    }
+                                });
+                                downloadManager.download(downloadInfo);
+                            }
                         }
 
                     }
@@ -235,53 +239,56 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
                             File imageFile = new File(storageDir, fileName);
                             if(imageFile.exists()){
-                                Toast.makeText(context, "File already exists..", Toast.LENGTH_SHORT).show();
-                                return;
+                                Toast.makeText(context, "Some Files already exists..", Toast.LENGTH_SHORT).show();
+
+                            }else
+                            {
+                                final DownloadInfo downloadInfo = new DownloadInfo.Builder().setUrl(url)
+                                        .setPath(imageFile.getAbsolutePath())
+                                        .build();
+                                downloadInfo.setDownloadListener(new DownloadListener() {
+                                    @Override
+                                    public void onStart() { }
+
+                                    @Override
+                                    public void onWaited() { }
+
+                                    @Override
+                                    public void onPaused() { }
+
+                                    @Override
+                                    public void onDownloading(long progress, long size) {
+                                        notificationUtils.showNotification(downloadInfo.hashCode(),downloadInfo.getId(),"Downloading "+fileName,"Downloaded "+formatFileSize(progress)+"/"+formatFileSize(size),true, null);
+                                    }
+
+                                    @Override
+                                    public void onRemoved() {
+                                        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
+                                        notificationManager.cancel(downloadInfo.hashCode());
+                                    }
+
+                                    @Override
+                                    public void onDownloadSuccess() {
+                                        Intent intent=new Intent();
+                                        intent.setAction(Intent.ACTION_VIEW);
+                                        Uri uri= FileProvider.getUriForFile(context,context.getPackageName()+".provider",imageFile);
+                                        intent.setDataAndType(uri,"video/*");
+                                        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                                        PendingIntent pendingIntent=PendingIntent.getActivity(context,0,intent,0);
+                                        galleryAddPic(imageFile);
+                                        Toast.makeText(context, "Download Completed", Toast.LENGTH_SHORT).show();
+                                        notificationUtils.showNotification(downloadInfo.hashCode(),downloadInfo.getId(),"Download successful","Downloaded "+fileName,false,pendingIntent);
+                                    }
+
+                                    @Override
+                                    public void onDownloadFailed(DownloadException e) {
+                                        Toast.makeText(context, "Download Failed", Toast.LENGTH_SHORT).show();
+                                        notificationUtils.showNotification(downloadInfo.hashCode(),downloadInfo.getId(),"Download failed","Couldn't download "+fileName,false, null);
+                                    }
+                                });
+                                downloadManager.download(downloadInfo);
                             }
-                            final DownloadInfo downloadInfo = new DownloadInfo.Builder().setUrl(url)
-                                    .setPath(imageFile.getAbsolutePath())
-                                    .build();
-                            downloadInfo.setDownloadListener(new DownloadListener() {
-                                @Override
-                                public void onStart() { }
 
-                                @Override
-                                public void onWaited() { }
-
-                                @Override
-                                public void onPaused() { }
-
-                                @Override
-                                public void onDownloading(long progress, long size) {
-                                    notificationUtils.showNotification(downloadInfo.hashCode(),downloadInfo.getId(),"Downloading "+fileName,"Downloaded "+formatFileSize(progress)+"/"+formatFileSize(size),true, null);
-                                }
-
-                                @Override
-                                public void onRemoved() {
-                                    NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
-                                    notificationManager.cancel(downloadInfo.hashCode());
-                                }
-
-                                @Override
-                                public void onDownloadSuccess() {
-                                    Intent intent=new Intent();
-                                    intent.setAction(Intent.ACTION_VIEW);
-                                    Uri uri= FileProvider.getUriForFile(context,context.getPackageName()+".provider",imageFile);
-                                    intent.setDataAndType(uri,"video/*");
-                                    intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                                    PendingIntent pendingIntent=PendingIntent.getActivity(context,0,intent,0);
-                                    galleryAddPic(imageFile);
-                                    Toast.makeText(context, "Download Completed", Toast.LENGTH_SHORT).show();
-                                    notificationUtils.showNotification(downloadInfo.hashCode(),downloadInfo.getId(),"Download successful","Downloaded "+fileName,false,pendingIntent);
-                                }
-
-                                @Override
-                                public void onDownloadFailed(DownloadException e) {
-                                    Toast.makeText(context, "Download Failed", Toast.LENGTH_SHORT).show();
-                                    notificationUtils.showNotification(downloadInfo.hashCode(),downloadInfo.getId(),"Download failed","Couldn't download "+fileName,false, null);
-                                }
-                            });
-                            downloadManager.download(downloadInfo);
 
                         }
 
@@ -340,6 +347,14 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
                 builder.show();
 
             });
+            holder.copy.setOnClickListener(v -> {
+                String Caption= repost.getCaption();
+                Intent txtIntent = new Intent(android.content.Intent.ACTION_SEND);
+                txtIntent .setType("text/plain");
+                txtIntent .putExtra(android.content.Intent.EXTRA_SUBJECT, repost.getLink());
+                txtIntent .putExtra(android.content.Intent.EXTRA_TEXT, Caption);
+                context.startActivity(Intent.createChooser(txtIntent ,"Share"));
+            });
         }
 
         holder.username.setText(String.format("@%s",repost.getUsername()));
@@ -357,8 +372,13 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
                         if(recents){
                             holder.caption.setVisibility(View.GONE);
+                            holder.post_desc_recents.setVisibility(View.VISIBLE);
+                            holder.post_desc_recents.setTextMaxLength(100);
+                            holder.post_desc_recents.setContent(repost.getCaption());
+
                         }else{
                             holder.caption.setText(repost.getCaption());
+                            holder.post_desc_recents.setVisibility(View.GONE);
 
                         }
 
@@ -402,6 +422,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView username,timestamp,caption;
+        private SeeMoreTextView post_desc_recents;
         private DotsIndicator indicator;
         private RelativeLayout indicator_holder;
         private ViewPager pager;
@@ -424,6 +445,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             pager=itemView.findViewById(R.id.pager);
             user_image=itemView.findViewById(R.id.post_user_image);
             delete=itemView.findViewById(R.id.delete_button);
+            post_desc_recents=itemView.findViewById(R.id.post_desc_recents);
 
         }
     }

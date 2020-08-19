@@ -160,7 +160,7 @@ public class VideoDownloaderDialogActivity extends AppCompatActivity {
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE);
         request.setVisibleInDownloadsUi(true);
 
-        String directory = getSharedPreferences("directory", Context.MODE_PRIVATE).getString("path", Environment.getExternalStorageDirectory().toString() + "/Media Toolbox");
+        String directory = getSharedPreferences("directory", Context.MODE_PRIVATE).getString("path", Environment.getExternalStorageDirectory().toString() + "/Whatstus");
         request.setDestinationUri(Uri.fromFile(new File(directory+"/Youtube/"+fileName)));
 
         DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);

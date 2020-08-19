@@ -24,5 +24,12 @@
     <color name="colorWhite">#ffffff</color>
     <color name="circular_progress">#1dc111</color>
     <color name="colorGrayTrans">#c46c6c6c</color>
-r>
+
+    <color name="colorRed">#f1433f</color>
+    <color name="colorYellow">#f7e967</color>
+    <color name="colorGreen">#a9cf54</color>
+    <color name="colorBlue">#70b7ba</color>
+    <color name="colorLightBlack">#3d4c53</color>
+    <color name="colorOrange">#fcb941</color>
+
 </resources>

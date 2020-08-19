@@ -43,7 +43,8 @@
             android:icon="@drawable/rate" android:title="RATE APP"/>
     <item
         android:id="@+id/id_github"
-        android:icon="@drawable/ic_github" android:title="Open Source"/>
+        android:icon="@drawable/ic_ko_fi" android:title="Support"/>
+    
 
 <!--    </group>-->
 

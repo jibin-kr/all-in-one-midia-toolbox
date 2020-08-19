@@ -1,11 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.shawnlin:number-picker:2.4.9@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/number-picker-2.4.9.aar/1204b8a63c9e10c1f99cde75b09f9bf7/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/number-picker-2.4.9.aar/43bd658bdde597d5af0bcd725fcea53a/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/number-picker-2.4.9.aar/1204b8a63c9e10c1f99cde75b09f9bf7/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/number-picker-2.4.9.aar/1204b8a63c9e10c1f99cde75b09f9bf7/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/number-picker-2.4.9.aar/43bd658bdde597d5af0bcd725fcea53a/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/number-picker-2.4.9.aar/43bd658bdde597d5af0bcd725fcea53a/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/number-picker-2.4.9.aar/43bd658bdde597d5af0bcd725fcea53a/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

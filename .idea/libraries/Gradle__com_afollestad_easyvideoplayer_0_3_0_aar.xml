@@ -1,11 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.afollestad:easyvideoplayer:0.3.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-easyvideoplayer-0.3.0.aar/c72780f518f83aa572b18211e065cccc/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-easyvideoplayer-0.3.0.aar/39b69155e8afa590f738035d29280c70/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-easyvideoplayer-0.3.0.aar/c72780f518f83aa572b18211e065cccc/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-easyvideoplayer-0.3.0.aar/c72780f518f83aa572b18211e065cccc/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-easyvideoplayer-0.3.0.aar/39b69155e8afa590f738035d29280c70/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-easyvideoplayer-0.3.0.aar/39b69155e8afa590f738035d29280c70/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-easyvideoplayer-0.3.0.aar/39b69155e8afa590f738035d29280c70/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

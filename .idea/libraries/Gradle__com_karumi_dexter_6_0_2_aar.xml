@@ -1,8 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.karumi:dexter:6.0.2@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/dexter-6.0.2.aar/79048893110ec245d2276d81f34ab1a8/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/dexter-6.0.2.aar/79048893110ec245d2276d81f34ab1a8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/dexter-6.0.2.aar/23c612554e9fa853f2a3f9e15a2dd61b/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/dexter-6.0.2.aar/23c612554e9fa853f2a3f9e15a2dd61b/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/dexter-6.0.2.aar/23c612554e9fa853f2a3f9e15a2dd61b/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

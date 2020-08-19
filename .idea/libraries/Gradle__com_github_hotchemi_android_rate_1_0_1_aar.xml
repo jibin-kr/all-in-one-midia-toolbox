@@ -1,8 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.hotchemi:android-rate:1.0.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-rate-1.0.1.aar/027560a4cc7d6a7f16eb25e8285d065d/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-rate-1.0.1.aar/027560a4cc7d6a7f16eb25e8285d065d/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-rate-1.0.1.aar/8dcb45b52a9ceadf43b660334fd2974e/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-rate-1.0.1.aar/8dcb45b52a9ceadf43b660334fd2974e/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-rate-1.0.1.aar/8dcb45b52a9ceadf43b660334fd2974e/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

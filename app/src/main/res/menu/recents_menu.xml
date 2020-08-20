@@ -5,20 +5,20 @@
     <item
         android:id="@+id/recents"
         android:title="Recents"
-        android:icon="@drawable/ic_restore_black_24dp"/>
+        android:icon="@drawable/ic_restore_white_24dp"/>
     <item
         android:id="@+id/newDownload"
         android:title="New Page"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_add_circle_violet_24dp"/>
+        android:icon="@drawable/ic_add_circle_white_24dp"/>
     <item
         android:id="@+id/idGallery"
         android:title="Gallery"
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_gallery_black_24dp"/>
+        android:icon="@drawable/ic_gallery_white_24dp"/>
     <item
         android:id="@+id/hd_pro_pick"
         android:title="HD Profile Picture"
-        android:icon="@drawable/ic_crop_black_24dp"/>
+        android:icon="@drawable/ic_crop_white_24dp"/>
 
 </menu>

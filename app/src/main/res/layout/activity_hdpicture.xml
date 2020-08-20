@@ -13,15 +13,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="5dp">
+        android:elevation="5dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             app:title="HD Profile Picture"
-            android:background="@color/white"
-            android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
+            android:background="@color/colorPrimary"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -67,7 +68,8 @@
                    android:src="@drawable/ic_account"
                    android:layout_gravity="center"
                    android:layout_width="match_parent"
-                   android:layout_height="match_parent"/>
+                   android:layout_height="match_parent"
+                   tools:ignore="VectorDrawableCompat" />
 
                <com.google.android.material.floatingactionbutton.FloatingActionButton
                    android:id="@+id/fab"
@@ -127,7 +129,7 @@
                android:layout_marginTop="30dp"
                android:text="Get Profile picture"
                android:onClick="getProfilePicture"
-               app:backgroundTint="@color/colorAccent"
+               style="@style/Widget.MaterialComponents.Button"
                app:layout_constraintStart_toStartOf="@id/username"
                app:layout_constraintEnd_toEndOf="@id/username"
                app:layout_constraintTop_toBottomOf="@id/username"

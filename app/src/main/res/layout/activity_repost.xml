@@ -14,16 +14,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
         android:elevation="5dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             app:title="Repost"
-            android:background="@color/white"
+            android:background="@color/colorPrimary"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"/>
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
     </com.google.android.material.appbar.AppBarLayout>
     <androidx.recyclerview.widget.RecyclerView
@@ -84,14 +85,13 @@
                     android:gravity="center_horizontal">
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/openInstaPost"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        style="@style/Widget.MaterialComponents.Button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="15dp"
                         android:onClick="loadIGPostFromURL"
                         android:text="Paste Link"
-                        android:textAllCaps="true"
-                        android:textColor="@color/colorBlack"></com.google.android.material.button.MaterialButton>
+                        android:textAllCaps="true"></com.google.android.material.button.MaterialButton>
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnDownload"
@@ -101,7 +101,7 @@
                         android:onClick="oneClickDowload"
                         android:text="Download"
                         android:textAllCaps="true"
-                        app:backgroundTint="@color/colorAccent"></com.google.android.material.button.MaterialButton>
+                        style="@style/Widget.MaterialComponents.Button"></com.google.android.material.button.MaterialButton>
                 </LinearLayout>
             </LinearLayout>
             <TextView

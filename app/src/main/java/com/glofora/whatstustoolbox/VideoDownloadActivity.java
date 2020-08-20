@@ -21,7 +21,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.glofora.whatstustoolbox.activity.RecentsActivity;
-import com.glofora.whatstustoolbox.activity.RepostActivity;
 import com.glofora.whatstustoolbox.adapter.SingleVideoAdapter;
 import com.glofora.whatstustoolbox.models.Video;
 import com.glofora.whatstustoolbox.room.VideoDatabase;
@@ -56,7 +55,7 @@ public class VideoDownloadActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater=getMenuInflater();
-        menuInflater.inflate(R.menu.youtube_recnet_menu,menu);
+        menuInflater.inflate(R.menu.youtube_recnets_menu,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -76,6 +75,10 @@ public class VideoDownloadActivity extends AppCompatActivity {
 
         Toolbar toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setElevation(3.0f);
+
 
         try {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

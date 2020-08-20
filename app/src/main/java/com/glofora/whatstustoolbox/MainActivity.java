@@ -375,6 +375,14 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         startActivity(intent);
 
     }
+    public void openGithub(View view) {
+
+        Intent intent=new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("https://github.com/lvamsavarthan/Media-Toolbox"));
+        startActivity(intent);
+
+    }
+
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override

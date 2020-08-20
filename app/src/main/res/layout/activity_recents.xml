@@ -12,15 +12,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             app:title="Recents"
-            android:background="@color/white"
+            android:background="@color/colorPrimary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"/>
+            app:popupTheme="@style/AppTheme.PopupOverlay"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -50,7 +51,7 @@
         android:layout_height="0dp">
 
         <ImageView
-            app:srcCompat="@drawable/ic_recents"
+            app:srcCompat="@drawable/ic_restore_black_24dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
             tools:ignore="VectorDrawableCompat" />

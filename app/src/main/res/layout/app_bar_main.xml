@@ -96,6 +96,37 @@
 
                 tools:listitem="@layout/item_card" />
 <!--            app:layout_constraintTop_toBottomOf="@id/top"-->
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:id="@+id/copyright"
+                android:text="Copyright @ 2020"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/developer"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/developed_with_by_amsavarthan_lv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/copyright" />
+
+            <Button
+                android:id="@+id/download"
+                android:layout_gravity="center"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:text="Open Source Credits"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:onClick="openGithub"
+                android:textColor="?android:textColorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

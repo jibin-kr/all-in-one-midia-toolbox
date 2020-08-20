@@ -29,10 +29,10 @@
                         android:layout_height="wrap_content"
                         android:text="WhatsApp"
                         android:layout_marginEnd="15dp"
-                        android:textColor="@color/colorPrimary"
                         app:useMaterialThemeColors="true"
                         android:textAllCaps="true"
-                        android:checked="true"/>
+                        android:checked="true"
+                        android:textColor="@color/colorPrimaryDark"/>
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/radio_Instagram"
                         android:layout_width="wrap_content"
@@ -40,7 +40,7 @@
                         app:useMaterialThemeColors="true"
                         android:text="Other Apps"
                         android:textAllCaps="true"
-                        android:textColor="@color/colorPrimary" />
+                        android:textColor="@color/colorPrimaryDark" />
                 </RadioGroup>
                 <Space
                     android:layout_width="30dp"
@@ -76,7 +76,7 @@
                     android:layout_height="10dp"/>
                 <Button
                     android:id="@+id/cameraButton"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Record Video"
@@ -90,7 +90,7 @@
 
                 <Button
                     android:id="@+id/galleryButton"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Select From Gallery"

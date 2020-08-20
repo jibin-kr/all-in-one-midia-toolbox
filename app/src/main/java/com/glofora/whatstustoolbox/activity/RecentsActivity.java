@@ -70,6 +70,8 @@ public class RecentsActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setElevation(3.0f);
+
 
         defaultLayout=findViewById(R.id.default_layout);
         recyclerView=findViewById(R.id.recyclerView);

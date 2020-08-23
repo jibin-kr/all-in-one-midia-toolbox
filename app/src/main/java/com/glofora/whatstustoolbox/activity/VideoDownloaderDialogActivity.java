@@ -3,6 +3,7 @@ package com.glofora.whatstustoolbox.activity;
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.Bundle;
@@ -114,6 +115,7 @@ public class VideoDownloaderDialogActivity extends AppCompatActivity {
     private void addButtonToMainLayout(final String videoTitle, final YtFragmentedVideo ytFrVideo) {
         String btnText;
         if (ytFrVideo.height == -1)
+
             btnText = "Audio " + ytFrVideo.audioFile.getFormat().getAudioBitrate() + " kbit/s";
         else
             btnText = (ytFrVideo.videoFile.getFormat().getFps() == 60) ? ytFrVideo.height + "p60" :
@@ -149,9 +151,40 @@ public class VideoDownloaderDialogActivity extends AppCompatActivity {
                 finish();
             }
         });
+        Button btnshare = new Button(this);
+        btnshare.setText("Share");
+        btnshare.setOnClickListener(view -> {
+            String filename;
+            if (videoTitle.length() > 55) {
+                filename = videoTitle.substring(0, 55);
+            } else {
+                filename = videoTitle;
+            }
+            filename = filename.replaceAll("[\\\\><\"|*?%:#/]", "");
+            filename += (ytFrVideo.height == -1) ? "" : "-" + ytFrVideo.height + "p";
+
+
+            if (ytFrVideo.videoFile != null) {
+                sharURL(ytFrVideo.videoFile.getUrl(),filename);
+
+            }
+            if (ytFrVideo.audioFile != null) {
+               sharURL(ytFrVideo.audioFile.getUrl(),filename);
+            }
+
+            finish();
+        });
+        mainLayout.addView(btnshare);
         mainLayout.addView(btn);
     }
+ public void sharURL(String URL,String filename){
 
+     Intent txtIntent = new Intent(android.content.Intent.ACTION_SEND);
+     txtIntent .setType("text/plain");
+     txtIntent .putExtra(android.content.Intent.EXTRA_SUBJECT, filename);
+     txtIntent .putExtra(android.content.Intent.EXTRA_TEXT, URL);
+     startActivity(Intent.createChooser(txtIntent ,"Share"));
+ }
     private long downloadFromUrl(String youtubeDlUrl, String downloadTitle, String fileName, boolean hide) {
         Toast.makeText(this, "Download started...", Toast.LENGTH_SHORT).show();
         Uri uri = Uri.parse(youtubeDlUrl);

@@ -94,7 +94,7 @@ public class SingleVideoAdapter extends RecyclerView.Adapter<SingleVideoAdapter.
                         .setIcon(R.drawable.ic_file_download)
                         .setMessage("Which you want to download?")
                         .setCancelable(true)
-                        .setPositiveButton("Video", (dialog, which) -> {
+                        .setPositiveButton("Video/Audio", (dialog, which) -> {
                             dialog.dismiss();
                             download(video.getTitle(),video.getVideo_url(),null,"video");
                         })

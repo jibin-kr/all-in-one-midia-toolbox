@@ -159,7 +159,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.ViewHolder> 
                         .setTitle("Download")
                         .setMessage("What do you want to download?")
                         .setCancelable(true)
-                        .setPositiveButton("Video", (dialog, which) -> {
+                        .setPositiveButton("Audio/Video", (dialog, which) -> {
                             dialog.dismiss();
                             download(video.getTitle(),video.getVideo_url(),null,"video");
                         })

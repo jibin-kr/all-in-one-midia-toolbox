@@ -85,28 +85,21 @@ public class SingleVideoAdapter extends RecyclerView.Adapter<SingleVideoAdapter.
                 .load(video.getThumbnail_max_url())
                 .into(holder.thumbnail);
 
-        holder.download.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        holder.download.setOnClickListener(v -> new AlertDialog.Builder(context)
+                .setTitle("Download")
+                .setIcon(R.drawable.ic_file_download)
+                .setMessage("Which you want to download?")
+                .setCancelable(true)
+                .setPositiveButton("Video/Audio", (dialog, which) -> {
+                    dialog.dismiss();
+                    download(video.getTitle(),video.getVideo_url(),null,"video");
+                })
+                .setNegativeButton("Thumbnail", (dialog, which) -> {
+                    dialog.dismiss();
+                    download(video.getTitle(),null,video.getThumbnail_max_url(),"thumbnail");
 
-                new AlertDialog.Builder(context)
-                        .setTitle("Download")
-                        .setIcon(R.drawable.ic_file_download)
-                        .setMessage("Which you want to download?")
-                        .setCancelable(true)
-                        .setPositiveButton("Video/Audio", (dialog, which) -> {
-                            dialog.dismiss();
-                            download(video.getTitle(),video.getVideo_url(),null,"video");
-                        })
-                        .setNegativeButton("Thumbnail", (dialog, which) -> {
-                            dialog.dismiss();
-                            download(video.getTitle(),null,video.getThumbnail_max_url(),"thumbnail");
-
-                        })
-                        .show();
-
-            }
-        });
+                })
+                .show());
 
     }
 

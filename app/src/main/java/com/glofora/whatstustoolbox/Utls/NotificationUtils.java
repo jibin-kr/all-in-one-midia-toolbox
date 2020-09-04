@@ -5,6 +5,7 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.text.TextUtils;
 
@@ -13,6 +14,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
 import com.glofora.whatstustoolbox.R;
+import com.glofora.whatstustoolbox.activity.CancelDownloadActivity;
 
 
 public class NotificationUtils {
@@ -40,6 +42,12 @@ public class NotificationUtils {
         bigTextStyle.setBigContentTitle(title);
         bigTextStyle.bigText(message);
 
+
+        Intent notificationIntent = new Intent(mContext, CancelDownloadActivity.class);
+        notificationIntent.putExtra("downloadID", groupId);
+        notificationIntent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        PendingIntent pendingNotificationIntent = PendingIntent.getActivity(mContext,0,notificationIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+
        if(pendingIntent!=null){
            if(!TextUtils.isEmpty(groupId)) {
                notification = mBuilder
@@ -47,6 +55,7 @@ public class NotificationUtils {
                        .setOngoing(ongoing)
                        .setContentTitle(title)
                        .setGroup(groupId)
+
                        .setContentText(message)
                        .setTicker(title)
                        .setStyle(bigTextStyle)
@@ -54,6 +63,7 @@ public class NotificationUtils {
                        .setDefaults(Notification.DEFAULT_SOUND)
                        .setSmallIcon(R.drawable.ic_done_all_black_24dp)
                        .build();
+
            }else{
                notification = mBuilder
                        .setAutoCancel(true)
@@ -70,22 +80,33 @@ public class NotificationUtils {
        }else{
            if(!TextUtils.isEmpty(groupId)) {
                notification = mBuilder
+                       .setAutoCancel(true)
                        .setOngoing(ongoing)
                        .setContentTitle(title)
                        .setStyle(bigTextStyle)
                        .setContentText(message)
+                       .setChannelId(groupId)
                        .setTicker(title)
                        .setSmallIcon(R.drawable.ic_file_download)
-                       .build();
+                       .addAction(R.drawable.ic_add_circle_violet_24dp, "Cancel",
+                               pendingNotificationIntent)
+                       .build()
+
+
+               ;
            }else{
                notification = mBuilder
+                       .setAutoCancel(true)
                        .setOngoing(ongoing)
                        .setContentTitle(title)
                        .setContentText(message)
                        .setStyle(bigTextStyle)
                        .setTicker(title)
                        .setGroup(groupId)
+                       .setChannelId(groupId)
                        .setSmallIcon(R.drawable.ic_file_download)
+                       .addAction(R.drawable.ic_add_circle_violet_24dp, "Cancel",
+                               pendingNotificationIntent)
                        .build();
            }
        }

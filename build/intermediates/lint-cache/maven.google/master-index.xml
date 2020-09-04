@@ -35,6 +35,7 @@
   <androidx.cursoradapter/>
   <androidx.customview/>
   <androidx.databinding/>
+  <androidx.datastore/>
   <androidx.documentfile/>
   <androidx.drawerlayout/>
   <androidx.dynamicanimation/>
@@ -96,11 +97,17 @@
   <androidx.window/>
   <androidx.work/>
   <com.android/>
+  <com.android.application/>
+  <com.android.asset-pack/>
   <com.android.billingclient/>
   <com.android.databinding/>
+  <com.android.dynamic-feature/>
   <com.android.installreferrer/>
   <com.android.java.tools.build/>
+  <com.android.library/>
+  <com.android.lint/>
   <com.android.ndk.thirdparty/>
+  <com.android.reporting/>
   <com.android.support/>
   <com.android.support.constraint/>
   <com.android.support.test/>
@@ -109,6 +116,7 @@
   <com.android.support.test.janktesthelper/>
   <com.android.support.test.services/>
   <com.android.support.test.uiautomator/>
+  <com.android.test/>
   <com.android.tools/>
   <com.android.tools.analytics-library/>
   <com.android.tools.apkparser/>
@@ -122,6 +130,7 @@
   <com.android.tools.internal.build.test/>
   <com.android.tools.layoutlib/>
   <com.android.tools.lint/>
+  <com.android.tools.metalava/>
   <com.android.tools.pixelprobe/>
   <com.crashlytics.sdk.android/>
   <com.google.ads.afsn/>

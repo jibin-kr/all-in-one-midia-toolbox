@@ -14,7 +14,7 @@
         android:layout_marginRight="23dp"
         android:layout_marginTop="20dp"
         android:textSize="18sp"
-        android:text="Choose video format/quality" />
+        android:text="Choose audio/video format/quality" />
 
     <ScrollView
         android:paddingBottom="16dp"

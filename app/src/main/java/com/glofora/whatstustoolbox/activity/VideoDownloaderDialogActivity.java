@@ -2,6 +2,7 @@ package com.glofora.whatstustoolbox.activity;
 
 import android.annotation.SuppressLint;
 import android.app.DownloadManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -15,15 +16,24 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationManagerCompat;
+import androidx.core.content.FileProvider;
 
 
 import com.glofora.whatstustoolbox.R;
+import com.glofora.whatstustoolbox.Utls.NotificationUtils;
+import com.ixuea.android.downloader.DownloadService;
+import com.ixuea.android.downloader.callback.DownloadListener;
+import com.ixuea.android.downloader.domain.DownloadInfo;
+import com.ixuea.android.downloader.exception.DownloadException;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 import at.huber.youtubeExtractor.VideoMeta;
@@ -38,6 +48,8 @@ public class VideoDownloaderDialogActivity extends AppCompatActivity {
 
     private LinearLayout mainLayout;
     private ProgressBar mainProgressBar;
+    private NotificationUtils notificationUtils;
+    private com.ixuea.android.downloader.callback.DownloadManager downloadManager;
     private List<YtFragmentedVideo> formatsToShowList;
 
     @Override
@@ -47,7 +59,8 @@ public class VideoDownloaderDialogActivity extends AppCompatActivity {
 
         mainLayout = findViewById(R.id.main_layout);
         mainProgressBar =findViewById(R.id.progress_bar);
-
+        notificationUtils=new NotificationUtils(this);
+        downloadManager = DownloadService.getDownloadManager(this);
         getYoutubeDownloadUrl(getIntent().getStringExtra("url"));
 
     }
@@ -122,38 +135,7 @@ public class VideoDownloaderDialogActivity extends AppCompatActivity {
                     ytFrVideo.height + "p";
         Button btn = new Button(this);
         btn.setText(btnText);
-        btn.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                String filename;
-                if (videoTitle.length() > 55) {
-                    filename = videoTitle.substring(0, 55);
-                } else {
-                    filename = videoTitle;
-                }
-                filename = filename.replaceAll("[\\\\><\"|*?%:#/]", "");
-                filename += (ytFrVideo.height == -1) ? "" : "-" + ytFrVideo.height + "p";
-                String downloadIds = "";
-                boolean hideAudioDownloadNotification = false;
-                if (ytFrVideo.videoFile != null) {
-                    downloadIds += downloadFromUrl(ytFrVideo.videoFile.getUrl(), videoTitle,
-                            filename + "." + ytFrVideo.videoFile.getFormat().getExt(), false);
-                    downloadIds += "-";
-                    hideAudioDownloadNotification = true;
-                }
-                if (ytFrVideo.audioFile != null) {
-                    downloadIds += downloadFromUrl(ytFrVideo.audioFile.getUrl(), videoTitle,
-                            filename + "." + ytFrVideo.audioFile.getFormat().getExt(), hideAudioDownloadNotification);
-                }
-                if (ytFrVideo.audioFile != null)
-                    cacheDownloadIds(downloadIds);
-                finish();
-            }
-        });
-        Button btnshare = new Button(this);
-        btnshare.setText("Share");
-        btnshare.setOnClickListener(view -> {
+        btn.setOnClickListener(v -> {
             String filename;
             if (videoTitle.length() > 55) {
                 filename = videoTitle.substring(0, 55);
@@ -162,29 +144,28 @@ public class VideoDownloaderDialogActivity extends AppCompatActivity {
             }
             filename = filename.replaceAll("[\\\\><\"|*?%:#/]", "");
             filename += (ytFrVideo.height == -1) ? "" : "-" + ytFrVideo.height + "p";
-
+            String downloadIds = "";
 
             if (ytFrVideo.videoFile != null) {
-                sharURL(ytFrVideo.videoFile.getUrl(),filename);
+
+                downloadNow(ytFrVideo.videoFile.getUrl(), videoTitle,
+                        filename + "." + ytFrVideo.videoFile.getFormat().getExt(),"." +ytFrVideo.videoFile.getFormat().getExt());
+
 
             }
             if (ytFrVideo.audioFile != null) {
-               sharURL(ytFrVideo.audioFile.getUrl(),filename);
-            }
+                downloadNow(ytFrVideo.audioFile.getUrl(), videoTitle,
+                        filename + "." + ytFrVideo.audioFile.getFormat().getExt(),"." + ytFrVideo.audioFile.getFormat().getExt());
 
+            }
+            if (ytFrVideo.audioFile != null)
+                cacheDownloadIds(downloadIds);
             finish();
         });
-        mainLayout.addView(btnshare);
+
         mainLayout.addView(btn);
     }
- public void sharURL(String URL,String filename){
 
-     Intent txtIntent = new Intent(android.content.Intent.ACTION_SEND);
-     txtIntent .setType("text/plain");
-     txtIntent .putExtra(android.content.Intent.EXTRA_SUBJECT, filename);
-     txtIntent .putExtra(android.content.Intent.EXTRA_TEXT, URL);
-     startActivity(Intent.createChooser(txtIntent ,"Share"));
- }
     private long downloadFromUrl(String youtubeDlUrl, String downloadTitle, String fileName, boolean hide) {
         Toast.makeText(this, "Download started...", Toast.LENGTH_SHORT).show();
         Uri uri = Uri.parse(youtubeDlUrl);
@@ -199,7 +180,123 @@ public class VideoDownloaderDialogActivity extends AppCompatActivity {
         DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
         return manager.enqueue(request);
     }
+    private void downloadNow(String youtubeDlUrl, String downloadTitle, String fileName,String fileExtention){
 
+
+
+            boolean success = true;
+            String directory;
+            File storageDir;
+            directory=getSharedPreferences("directory",MODE_PRIVATE).getString("path",Environment.getExternalStorageDirectory()+"/Whatstus/");
+
+            storageDir = new File(directory + "/Youtube/");
+
+            if (!storageDir.exists()) {
+                success = storageDir.mkdirs();
+            }
+
+            if(success) {
+
+                File imageFile = new File(storageDir, fileName);
+                if(imageFile.exists()){
+
+                    Date dNow = new Date();
+                    SimpleDateFormat ft = new SimpleDateFormat("yyMMddhhmmssMs");
+                    String datetime = ft.format(dNow);
+                    downloadNow(youtubeDlUrl,downloadTitle,downloadTitle+"_"+datetime+fileExtention,fileExtention);
+
+                }else
+                {
+                    final DownloadInfo downloadInfo = new DownloadInfo.Builder().setUrl(youtubeDlUrl)
+                            .setPath(imageFile.getAbsolutePath())
+                            .build();
+                    downloadInfo.setDownloadListener(new DownloadListener() {
+                        @Override
+                        public void onStart() { }
+
+                        @Override
+                        public void onWaited() { }
+
+                        @Override
+                        public void onPaused() { }
+
+                        @Override
+                        public void onDownloading(long progress, long size) {
+                            notificationUtils.showNotification(downloadInfo.hashCode(),downloadInfo.getId(),"Downloading "+fileName,"Downloaded "+formatFileSize(progress)+"/"+formatFileSize(size),true, null);
+                        }
+
+                        @Override
+                        public void onRemoved() {
+                            NotificationManagerCompat notificationManager = NotificationManagerCompat.from(VideoDownloaderDialogActivity.this);
+                            notificationManager.cancel(downloadInfo.hashCode());
+                        }
+
+                        @Override
+                        public void onDownloadSuccess() {
+                            Intent intent=new Intent();
+                            intent.setAction(Intent.ACTION_VIEW);
+                            Uri uri= FileProvider.getUriForFile(VideoDownloaderDialogActivity.this,getPackageName()+".provider",imageFile);
+                            intent.setDataAndType(uri,"video/*");
+                            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                            PendingIntent pendingIntent=PendingIntent.getActivity(VideoDownloaderDialogActivity.this,0,intent,0);
+                            galleryAddPic(imageFile);
+                            Toast.makeText(VideoDownloaderDialogActivity.this, "Download Completed", Toast.LENGTH_SHORT).show();
+                            notificationUtils.showNotification(downloadInfo.hashCode(),downloadInfo.getId(),"Download successful","Downloaded "+fileName,false,pendingIntent);
+                        }
+
+                        @Override
+                        public void onDownloadFailed(DownloadException e) {
+                            Toast.makeText(VideoDownloaderDialogActivity.this, "Download Failed", Toast.LENGTH_SHORT).show();
+                            notificationUtils.showNotification(downloadInfo.hashCode(),downloadInfo.getId(),"Download failed","Couldn't download "+fileName,false, null);
+                        }
+                    });
+
+                    downloadManager.download(downloadInfo);
+                }
+
+
+            }
+
+
+    }
+    private void galleryAddPic(File f) {
+        Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+        Uri contentUri = Uri.fromFile(f);
+        mediaScanIntent.setData(contentUri);
+        sendBroadcast(mediaScanIntent);
+    }
+    private static String formatFileSize(long size) {
+        String sFileSize = "";
+        if (size > 0) {
+            double dFileSize = (double) size;
+
+            double kiloByte = dFileSize / 1024;
+            if (kiloByte < 1 && kiloByte > 0) {
+                return size + "Byte";
+            }
+            double megaByte = kiloByte / 1024;
+            if (megaByte < 1) {
+                sFileSize = String.format("%.2f", kiloByte);
+                return sFileSize + "K";
+            }
+
+            double gigaByte = megaByte / 1024;
+            if (gigaByte < 1) {
+                sFileSize = String.format("%.2f", megaByte);
+                return sFileSize + "M";
+            }
+
+            double teraByte = gigaByte / 1024;
+            if (teraByte < 1) {
+                sFileSize = String.format("%.2f", gigaByte);
+                return sFileSize + "G";
+            }
+
+            sFileSize = String.format("%.2f", teraByte);
+            return sFileSize + "T";
+        }
+        return "0K";
+    }
     private void cacheDownloadIds(String downloadIds) {
         File dlCacheFile = new File(this.getCacheDir().getAbsolutePath() + "/" + downloadIds);
         try {

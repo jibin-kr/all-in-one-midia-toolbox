@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-gass:15.0.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-gass-15.0.1.aar/d29f58ddc7eea38ee381352492e66a06/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-gass-15.0.1.aar/d29f58ddc7eea38ee381352492e66a06/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-gass-15.0.1.aar/d29f58ddc7eea38ee381352492e66a06/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7f26e8a0b1c322a6b090b4d34bd22a49/jetified-play-services-gass-15.0.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7f26e8a0b1c322a6b090b4d34bd22a49/jetified-play-services-gass-15.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7f26e8a0b1c322a6b090b4d34bd22a49/jetified-play-services-gass-15.0.1/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

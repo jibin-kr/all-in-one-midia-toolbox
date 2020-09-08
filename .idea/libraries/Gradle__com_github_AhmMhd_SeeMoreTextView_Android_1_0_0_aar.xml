@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.AhmMhd:SeeMoreTextView-Android:1.0.0@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-SeeMoreTextView-Android-1.0.0.aar/25e61caab44dacb05906d66789a4f064/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-SeeMoreTextView-Android-1.0.0.aar/25e61caab44dacb05906d66789a4f064/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-SeeMoreTextView-Android-1.0.0.aar/25e61caab44dacb05906d66789a4f064/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6bd49e1139c2258e256db9424925b949/jetified-SeeMoreTextView-Android-1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6bd49e1139c2258e256db9424925b949/jetified-SeeMoreTextView-Android-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6bd49e1139c2258e256db9424925b949/jetified-SeeMoreTextView-Android-1.0.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

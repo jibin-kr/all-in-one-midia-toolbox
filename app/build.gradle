@@ -1,16 +1,21 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 29
     defaultConfig {
         applicationId "com.glofora_status_video_spliter"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 23
         versionName "1.198"
         multiDexEnabled true
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        def contentProviderAuthority = applicationId + ".stickercontentprovider"
+        manifestPlaceholders = [contentProviderAuthority: contentProviderAuthority]
+        buildConfigField("String", "CONTENT_PROVIDER_AUTHORITY", "\"${contentProviderAuthority}\"")
     }
     buildTypes {
         release {
@@ -64,11 +69,11 @@ dependencies {
 
 
 //    New Implementations
-    implementation 'android.arch.persistence.room:runtime:1.1.1'
-    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+    implementation 'androidx.room:room-runtime:2.0.0'
+    annotationProcessor 'androidx.room:room-compiler:2.0.0'
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
     implementation 'io.reactivex.rxjava2:rxjava:2.1.13'
-    implementation 'android.arch.persistence.room:rxjava2:1.1.1'
+    implementation 'androidx.room:room-rxjava2:2.0.0'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.ixuea:AndroidDownloader:2.0.6'
     implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:2.1.2'
@@ -77,8 +82,32 @@ dependencies {
     implementation 'com.karumi:dexter:6.0.2'
     implementation 'com.github.HaarigerHarald:android-youtubeExtractor:master-SNAPSHOT'
     implementation 'com.flaviofaria:kenburnsview:1.0.7'
-    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'androidx.multidex:multidex:2.0.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.github.AhmMhd:SeeMoreTextView-Android:1.0.0'
     implementation project(':videotrim')
+
+//    Implementation for Whatsapp Stickers
+    implementation "com.android.support:exifinterface:28.0.0"
+    implementation 'com.facebook.fresco:fresco:1.11.0'
+    implementation 'com.facebook.fresco:webpsupport:1.10.0'
+    implementation 'com.facebook.fresco:animated-webp:1.10.0'
+    implementation 'com.facebook.fresco:webpsupport:1.10.0'
+    implementation 'com.facebook.fresco:animated-base:1.13.0'
+
+
+    implementation "com.airbnb.android:lottie:2.7.0"
+    implementation 'com.sangcomz:FishBun:0.8.7'
+
+    //background remover
+    implementation 'com.github.duanhong169:checkerboarddrawable:1.0.2'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.0'
+    implementation 'com.alexvasilkov:gesture-views:2.5.2'
+    implementation 'com.github.apl-devs:appintro:v4.2.3'
+    implementation 'com.github.jkwiecien:EasyImage:1.3.1'
+    implementation 'com.github.florent37:depth:1.0.0'
+
+    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
 }

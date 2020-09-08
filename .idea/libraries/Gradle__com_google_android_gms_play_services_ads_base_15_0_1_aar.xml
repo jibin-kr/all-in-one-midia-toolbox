@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-ads-base:15.0.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-ads-base-15.0.1.aar/dbab846ca957dc7a268b89aa67d1304a/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-ads-base-15.0.1.aar/dbab846ca957dc7a268b89aa67d1304a/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-ads-base-15.0.1.aar/dbab846ca957dc7a268b89aa67d1304a/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/64f7b6d302cd183f3a5ea8693d24d069/jetified-play-services-ads-base-15.0.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/64f7b6d302cd183f3a5ea8693d24d069/jetified-play-services-ads-base-15.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/64f7b6d302cd183f3a5ea8693d24d069/jetified-play-services-ads-base-15.0.1/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

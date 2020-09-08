@@ -39,6 +39,7 @@ import com.glofora.whatstustoolbox.activity.RecentsActivity;
 import com.glofora.whatstustoolbox.activity.RepostActivity;
 import com.glofora.whatstustoolbox.adapter.MainCardsAdapter;
 import com.glofora.whatstustoolbox.models.Card;
+import com.glofora.whatstustoolbox.whatsappstickers.activities.RequestPermissionActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
@@ -213,17 +214,24 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
                         return;
                     case "Gallery":
                     {
-                        String[] PERMISSIONS = {
-                                android.Manifest.permission.READ_EXTERNAL_STORAGE,
-                                android.Manifest.permission.WRITE_EXTERNAL_STORAGE
-                        };
+//                        String[] PERMISSIONS = {
+//                                android.Manifest.permission.READ_EXTERNAL_STORAGE,
+//                                android.Manifest.permission.WRITE_EXTERNAL_STORAGE
+//                        };
+//
+//                        if (Utilities.hasPermissions(MainActivity.this, PERMISSIONS)) {
+//                            ShowPicker();
+//
+//                        } else {
+//                            ActivityCompat.requestPermissions(MainActivity.this, PERMISSIONS, PICKER_REQUEST_CODE);
+//                        }
 
-                        if (Utilities.hasPermissions(MainActivity.this, PERMISSIONS)) {
-                            ShowPicker();
+//                        Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.absolute.whatsappstickers");
+//                        if (launchIntent != null) {
+//                            startActivity(launchIntent);//null pointer check in case package name was not found
+//                        }
+                        startActivity(new Intent(MainActivity.this, RequestPermissionActivity.class));
 
-                        } else {
-                            ActivityCompat.requestPermissions(MainActivity.this, PERMISSIONS, PICKER_REQUEST_CODE);
-                        }
                     }
                     }
 

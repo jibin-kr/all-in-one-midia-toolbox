@@ -3,7 +3,9 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ixuea/AndroidDownloader/2.0.6/20263ca056ba8127f38fedd09890386b3691e677/AndroidDownloader-2.0.6.jar!/" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ixuea/AndroidDownloader/2.0.6/e8bcda8dd986df4764bd72d01a51f55e6e4af09f/AndroidDownloader-2.0.6-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ixuea/AndroidDownloader/2.0.6/3eebf3124055a9b617bfed847067e65e4a4aa21e/AndroidDownloader-2.0.6-sources.jar!/" />
     </SOURCES>

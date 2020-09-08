@@ -1,11 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.clans:fab:1.6.4@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fab-1.6.4.aar/006ab33069d63b7256d23e492e413a8c/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fab-1.6.4.aar/006ab33069d63b7256d23e492e413a8c/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fab-1.6.4.aar/006ab33069d63b7256d23e492e413a8c/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3ad13dc4be1317ad3b1ccda426a4f144/jetified-fab-1.6.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3ad13dc4be1317ad3b1ccda426a4f144/jetified-fab-1.6.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3ad13dc4be1317ad3b1ccda426a4f144/jetified-fab-1.6.4/res" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.clans/fab/1.6.4/9f4322ba4a76940484e06a05e98fa77457822f1c/fab-1.6.4-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.clans/fab/1.6.4/b2470845485e429cf879d98bc5bbcd3cf9578187/fab-1.6.4-sources.jar!/" />
     </SOURCES>

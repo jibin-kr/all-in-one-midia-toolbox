@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 //                        if (launchIntent != null) {
 //                            startActivity(launchIntent);//null pointer check in case package name was not found
 //                        }
-                        startActivity(new Intent(MainActivity.this, RequestPermissionActivity.class));
+                        startActivity(new Intent(MainActivity.this, com.glofora.whatstustoolbox.whatsappstickers.activities.MainActivity.class));
 
                     }
                     }

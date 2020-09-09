@@ -88,7 +88,7 @@ dependencies {
     implementation project(':videotrim')
 
 //    Implementation for Whatsapp Stickers
-    implementation "com.android.support:exifinterface:28.0.0"
+    implementation 'androidx.exifinterface:exifinterface:1.0.0'
     implementation 'com.facebook.fresco:fresco:1.11.0'
     implementation 'com.facebook.fresco:webpsupport:1.10.0'
     implementation 'com.facebook.fresco:animated-webp:1.10.0'
@@ -96,7 +96,7 @@ dependencies {
     implementation 'com.facebook.fresco:animated-base:1.13.0'
 
 
-    implementation "com.airbnb.android:lottie:2.7.0"
+    implementation 'com.airbnb.android:lottie:2.8.0'
     implementation 'com.sangcomz:FishBun:0.8.7'
 
     //background remover

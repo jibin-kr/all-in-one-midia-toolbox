@@ -4,7 +4,6 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c0a57b6bb57cd8bb326feb9492a5dfdf/jetified-matisse-0.5.3-beta3/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c0a57b6bb57cd8bb326feb9492a5dfdf/jetified-matisse-0.5.3-beta3/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c0a57b6bb57cd8bb326feb9492a5dfdf/jetified-matisse-0.5.3-beta3/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c0a57b6bb57cd8bb326feb9492a5dfdf/jetified-matisse-0.5.3-beta3/res" />
     </CLASSES>

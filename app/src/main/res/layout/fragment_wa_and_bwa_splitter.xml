@@ -46,7 +46,6 @@
                     android:layout_width="30dp"
                     android:layout_height="15dp"/>
                 <TextView
-                    android:id="@+id/help_msg_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Select time(In Seconds) of video slice as you want. \nEg. For Whatsapp Status : 30 Seconds"

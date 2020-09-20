@@ -4,7 +4,6 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a18ce0e8d2298d42a97c844dfa472d75/appcompat-1.1.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a18ce0e8d2298d42a97c844dfa472d75/appcompat-1.1.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a18ce0e8d2298d42a97c844dfa472d75/appcompat-1.1.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a18ce0e8d2298d42a97c844dfa472d75/appcompat-1.1.0/res" />
     </CLASSES>

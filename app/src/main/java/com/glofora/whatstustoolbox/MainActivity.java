@@ -1,16 +1,5 @@
 package com.glofora.whatstustoolbox;
 
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.ActivityCompat;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.Manifest;
 import android.app.ActivityManager;
 import android.app.ProgressDialog;
@@ -30,6 +19,16 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.glofora.whatstustoolbox.Gallery.Glide4Engine;
 import com.glofora.whatstustoolbox.Utls.NotificationUtils;
@@ -39,7 +38,6 @@ import com.glofora.whatstustoolbox.activity.RecentsActivity;
 import com.glofora.whatstustoolbox.activity.RepostActivity;
 import com.glofora.whatstustoolbox.adapter.MainCardsAdapter;
 import com.glofora.whatstustoolbox.models.Card;
-import com.glofora.whatstustoolbox.whatsappstickers.activities.RequestPermissionActivity;
 import com.google.android.material.navigation.NavigationView;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
@@ -189,7 +187,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
                 })
                 .check();
 
-        version = findViewById(R.id.version);
+//        version = findViewById(R.id.version);
         recyclerView=findViewById(R.id.recyclerView);
 
         cardsAdapter=new MainCardsAdapter(cardList, new MainCardsAdapter.OnItemClickListener() {
@@ -214,23 +212,20 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
                         return;
                     case "Gallery":
                     {
-//                        String[] PERMISSIONS = {
-//                                android.Manifest.permission.READ_EXTERNAL_STORAGE,
-//                                android.Manifest.permission.WRITE_EXTERNAL_STORAGE
-//                        };
-//
-//                        if (Utilities.hasPermissions(MainActivity.this, PERMISSIONS)) {
-//                            ShowPicker();
-//
-//                        } else {
-//                            ActivityCompat.requestPermissions(MainActivity.this, PERMISSIONS, PICKER_REQUEST_CODE);
-//                        }
+                        String[] PERMISSIONS = {
+                                android.Manifest.permission.READ_EXTERNAL_STORAGE,
+                                android.Manifest.permission.WRITE_EXTERNAL_STORAGE
+                        };
 
-//                        Intent launchIntent = getPackageManager().getLaunchIntentForPackage("com.absolute.whatsappstickers");
-//                        if (launchIntent != null) {
-//                            startActivity(launchIntent);//null pointer check in case package name was not found
-//                        }
-                        startActivity(new Intent(MainActivity.this, com.glofora.whatstustoolbox.whatsappstickers.activities.MainActivity.class));
+                        if (Utilities.hasPermissions(MainActivity.this, PERMISSIONS)) {
+                            ShowPicker();
+
+                        } else {
+                            ActivityCompat.requestPermissions(MainActivity.this, PERMISSIONS, PICKER_REQUEST_CODE);
+                        }
+
+
+
 
                     }
                     }

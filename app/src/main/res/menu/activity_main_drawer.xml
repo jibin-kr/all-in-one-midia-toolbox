@@ -16,9 +16,7 @@
 <!--                    android:id="@+id/nav_splitter"-->
 <!--                    android:icon="@drawable/ic_video_editing"-->
 <!--                    android:title="Video Splitter" />-->
-            <group
-                android:id="@+id/instagram_groups"
-                android:checkableBehavior="none"
+            <group android:checkableBehavior="none"
                 >
         <item android:id="@+id/insta"
 

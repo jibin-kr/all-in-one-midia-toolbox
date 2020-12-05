@@ -8,8 +8,8 @@ android {
         applicationId "com.glofora_status_video_spliter"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 23
-        versionName "1.198"
+        versionCode 26
+        versionName "1.201"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

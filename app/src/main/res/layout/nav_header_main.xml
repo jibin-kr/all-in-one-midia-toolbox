@@ -15,17 +15,14 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:onClick="unlockYoutube" />
+        android:background="@color/colorPrimary" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="@dimen/nav_header_vertical_spacing"
-        android:text="Whatstus \nAll In One Media Toolbox"
+        android:text="Glofora Toolbox \nAll In One Media Toolbox"
         android:textSize="18dp"
-        android:onClick="unlockYoutube"
-
         android:textColor="@android:color/white"
        />
 

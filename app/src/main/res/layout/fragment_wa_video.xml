@@ -4,7 +4,7 @@
     android:id="@+id/fragment_wa_video"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.glofora.whatstustoolbox.fragments.wa.WAImageFragment">
+    tools:context="com.glofora.toolbox.fragments.wa.WAImageFragment">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

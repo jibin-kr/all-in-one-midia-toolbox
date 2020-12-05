@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Come Back to Whatstus, Click on any Image or Video to View..." />
+            android:text="Come Back to Glofora Toolbox, Click on any Image or Video to View..." />
         <TextView
             android:textSize="17sp"
             android:layout_width="wrap_content"

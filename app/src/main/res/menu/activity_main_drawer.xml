@@ -36,14 +36,17 @@
 
 
             </group>
-<!--    <group android:checkableBehavior="single">-->
+    <group android:checkableBehavior="none">
         <item
             android:icon="@drawable/rate" android:title="RATE APP"/>
-    <item
-        android:id="@+id/id_github"
-        android:icon="@drawable/ic_ko_fi" android:title="Support"/>
+<!--    <item-->
+<!--        android:id="@+id/id_github"-->
+<!--        android:icon="@drawable/ic_ko_fi" android:title="Support"/>-->
+        <item
+            android:id="@+id/id_website"
+            android:icon="@drawable/ic_baseline_web_24" android:title="Web Site"/>
     
 
-<!--    </group>-->
+    </group>
 
 </menu>

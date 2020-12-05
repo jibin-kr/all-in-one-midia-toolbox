@@ -90,7 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.glofora.whatstustoolbox.AdaptableViewPager
+            <com.glofora.toolbox.AdaptableViewPager
                 android:id="@+id/pager"
                 android:layout_gravity="top"
                 android:layout_width="match_parent"

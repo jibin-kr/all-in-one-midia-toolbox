@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">Whatstus</string>
+    <string name="app_name">Glofora Toolbox</string>
     <string name="developed_with_by_amsavarthan_lv">Developed with 💝 by Glofora Solutions</string>
     <string name="app_provider">com.glofora_status_video_spliter.provider</string>
     <string name="label_cancel">Cancel</string>
     <string name="label_ok">OK</string>
-    <string name="file_split_path">/storage/emulated/0/Whatstus/</string>
-    <string name="file_temp_path">/storage/emulated/0/Whatstus/.tmp/</string>
+    <string name="file_split_path">/storage/emulated/0/Glofora Toolbox/</string>
+    <string name="file_temp_path">/storage/emulated/0/Glofora Toolbox/.tmp/</string>
     <string name="label_select_video">Select Video</string>
     <string name="permission_title_rationale">Permission needed</string>
     <string name="permission_read_storage_rationale">Storage read permission is needed to pick files.</string>
@@ -19,7 +19,7 @@
     <string name="error_gif">x or y bound size should be at least %1$dpx and file size should be no more than %2$sM</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="share_app_sub">Whatstus - All In One Media Toolbox (Instagram Media downloader,Whatsapp Status Saver, Video Splitter etc)</string>
+    <string name="share_app_sub">Glofora Toolbox - All In One Media Toolbox (Instagram Media downloader,Whatsapp Status Saver, Video Splitter etc)</string>
     <string name="share_app_msg">\nLet me recommend you this application\n\n</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>

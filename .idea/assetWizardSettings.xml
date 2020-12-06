@@ -28,8 +28,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_baseline_web_24" />
-                            <entry key="sourceFile" value="C:\Users\Jibin\C:\Users\Jibin\Downloads\ko-fi.svg" />
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="outputName" value="ic_save_18" />
+                            <entry key="sourceFile" value="C:\Users\Jibin\Downloads\save-file-option.svg" />
                           </map>
                         </option>
                       </PersistentState>

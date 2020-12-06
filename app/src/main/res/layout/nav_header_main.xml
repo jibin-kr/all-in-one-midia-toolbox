@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="@dimen/nav_header_vertical_spacing"
-        android:text="Glofora Toolbox \nAll In One Media Toolbox"
+        android:text="All In One Media Toolbox"
         android:textSize="18dp"
         android:textColor="@android:color/white"
        />

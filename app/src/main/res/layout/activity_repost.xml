@@ -19,7 +19,7 @@
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            app:title="Repost"
+            app:title="Post Saver"
             android:background="@color/colorPrimary"
 
             android:layout_width="match_parent"

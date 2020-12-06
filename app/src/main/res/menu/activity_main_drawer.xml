@@ -20,22 +20,23 @@
                 >
         <item android:id="@+id/insta"
 
-            android:title="Instagram Repost"
-            android:icon="@drawable/repost"
+            android:title="Post Saver"
+            android:icon="@drawable/ic_instagram_24"
             />
         <item android:id="@+id/insta_recents"
 
-            android:title="Instagram Recents"
-            android:icon="@drawable/ic_update_white_24dp"
+            android:title="Recents"
+            android:icon="@drawable/ic_history"
             />
         <item android:id="@+id/insta_hd_profile_pic"
 
-            android:title="HD Profile Pic"
-            android:icon="@drawable/ic_crop_white_24dp"
+            android:title="Save Profile Picture"
+            android:icon="@drawable/ic_save_21"
             />
 
 
             </group>
+
     <group android:checkableBehavior="none">
         <item
             android:icon="@drawable/rate" android:title="RATE APP"/>

@@ -79,16 +79,16 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
                 }
                 //************ youtube *************** comment bellow code when upload to playstore
-                else if(intentData.contains("://youtu.be/")||intentData.contains("youtube.com/watch?v=")){
-
-
-
-                        startActivity(new Intent(this, VideoDownloadActivity.class).putExtra("url",intentData));
-                        finish();
-
-
-
-                }
+//                else if(intentData.contains("://youtu.be/")||intentData.contains("youtube.com/watch?v=")){
+//
+//
+//
+//                        startActivity(new Intent(this, VideoDownloadActivity.class).putExtra("url",intentData));
+//                        finish();
+//
+//
+//
+//                }
             }
         }
 
@@ -127,16 +127,16 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
                 }
              //************ youtube *************** comment bellow code when upload to playstore
-             else if(intentData.contains("://youtu.be/")||intentData.contains("youtube.com/watch?v=")){
-
-
-
-                        startActivity(new Intent(this, VideoDownloadActivity.class).putExtra("url",intentData));
-                        finish();
-
-
-
-                }
+//             else if(intentData.contains("://youtu.be/")||intentData.contains("youtube.com/watch?v=")){
+//
+//
+//
+//                        startActivity(new Intent(this, VideoDownloadActivity.class).putExtra("url",intentData));
+//                        finish();
+//
+//
+//
+//                }
             }
         }
 
@@ -183,10 +183,10 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
             public void onItemClick(Card cardItem) {
 
                 switch (cardItem.getText()){
-                    case "Repost":
+                    case "Post Saver":
                         startActivity(new Intent(MainActivity.this,RepostActivity.class));
                         return;
-                    case "HD Profile Picture":
+                    case "Save Profile Picture":
                         startActivity(new Intent(MainActivity.this, HDPictureActivity.class));
                         return;
                     case "Video Splitter":
@@ -312,21 +312,21 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
         cardList.clear();
 
-        Card card=new Card("Repost",R.mipmap.repost,R.drawable.ic_instagram_black_256,R.color.colorOrange);
+        Card card=new Card("Post Saver",R.mipmap.repost,R.drawable.ic_instagram_black_256,R.color.colorOrange);
         cardList.add(card);
 
-        card=new Card("HD Profile Picture",R.mipmap.crop,R.drawable.ic_instagram_black_256,R.color.colorYellow);
+        card=new Card("Save Profile Picture",R.mipmap.crop,R.drawable.ic_instagram_black_256,R.color.colorYellow);
         cardList.add(card);
 
         card=new Card("Status Saver",R.mipmap.save_status,R.drawable.ic_whatsapp_black_256,R.color.colorGreen);
         cardList.add(card);
 
 //************ youtube *************** comment bellow code when upload to playstore
-            card=new Card("Video Downloader",R.mipmap.download_video,R.drawable.ic_youtube_black_256,R.color.colorRed);
-            cardList.add(card);
+//            card=new Card("Video Downloader",R.mipmap.download_video,R.drawable.ic_youtube_black_256,R.color.colorRed);
+//            cardList.add(card);
 
 
-        card=new Card("Video Splitter",R.drawable.ic_edit_video_black_21,R.drawable.ic_cinema_black_256,R.color.colorBlue);
+        card=new Card("Video Splitter",R.drawable.ic_video_editing_20,R.drawable.ic_cinema_black_256,R.color.colorBlue);
         cardList.add(card);
         card=new Card("Gallery",R.drawable.ic_gallery_black_24dp,R.drawable.ic_photo_library_black_256,R.color.colorLightBlack);
         cardList.add(card);

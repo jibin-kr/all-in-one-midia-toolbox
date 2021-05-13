@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="whatstus/app" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/videotrim/videotrim.iml" filepath="$PROJECT_DIR$/.idea/modules/videotrim/videotrim.iml" group="whatstus/videotrim" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/whatstus.iml" filepath="$PROJECT_DIR$/.idea/modules/whatstus.iml" group="whatstus" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/whatstus.iml" filepath="$PROJECT_DIR$/.idea/modules/whatstus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/whatstus.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/whatstus.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/videotrim/whatstus.videotrim.iml" filepath="$PROJECT_DIR$/.idea/modules/videotrim/whatstus.videotrim.iml" />
     </modules>
   </component>
 </project>

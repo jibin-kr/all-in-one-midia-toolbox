@@ -2,10 +2,18 @@
   <library name="Gradle: com.afollestad:easyvideoplayer:0.3.0@aar">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-easyvideoplayer-0.3.0.aar/c72780f518f83aa572b18211e065cccc/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff85a9afe010c1d245c71393c75113d1/jetified-easyvideoplayer-0.3.0/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ae1e613db39a46a09e578de50a1744c8/jetified-easyvideoplayer-0.3.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-easyvideoplayer-0.3.0.aar/c72780f518f83aa572b18211e065cccc/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-easyvideoplayer-0.3.0.aar/c72780f518f83aa572b18211e065cccc/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff85a9afe010c1d245c71393c75113d1/jetified-easyvideoplayer-0.3.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff85a9afe010c1d245c71393c75113d1/jetified-easyvideoplayer-0.3.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ff85a9afe010c1d245c71393c75113d1/jetified-easyvideoplayer-0.3.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ae1e613db39a46a09e578de50a1744c8/jetified-easyvideoplayer-0.3.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ae1e613db39a46a09e578de50a1744c8/jetified-easyvideoplayer-0.3.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ae1e613db39a46a09e578de50a1744c8/jetified-easyvideoplayer-0.3.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.afollestad/easyvideoplayer/0.3.0/20b182862683fa76609ec4c1bb61359ea07e2060/easyvideoplayer-0.3.0-javadoc.jar!/" />

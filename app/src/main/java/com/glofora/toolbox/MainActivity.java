@@ -6,10 +6,12 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -50,6 +52,9 @@ import java.util.List;
 
 import hotchemi.android.rate.AppRate;
 
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+import static android.os.Build.VERSION.SDK_INT;
 import static com.glofora.toolbox.Utls.Utilities.PICKER_REQUEST_CODE;
 
 public class MainActivity extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener {
@@ -141,7 +146,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         }
 
         Dexter.withActivity(this)
-                .withPermissions(Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .withPermissions(READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE)
                 .withListener(new MultiplePermissionsListener() {
                     @Override
                     public void onPermissionsChecked(MultiplePermissionsReport report) {
@@ -183,26 +188,26 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
             public void onItemClick(Card cardItem) {
 
                 switch (cardItem.getText()){
-                    case "Post Saver":
-                        startActivity(new Intent(MainActivity.this,RepostActivity.class));
-                        return;
-                    case "Save Profile Picture":
-                        startActivity(new Intent(MainActivity.this, HDPictureActivity.class));
-                        return;
+//                    case "Post Saver":
+//                        startActivity(new Intent(MainActivity.this,RepostActivity.class));
+//                        return;
+//                    case "Save Profile Picture":
+//                        startActivity(new Intent(MainActivity.this, HDPictureActivity.class));
+//                        return;
                     case "Video Splitter":
                         startActivity(new Intent(MainActivity.this,VideoSplitterActivity.class));
                         return;
                     case "Status Saver":
                         startActivity(new Intent(MainActivity.this, StatusSaverActivity.class));
                         return;
-                    case "Video Downloader":
-                        startActivity(new Intent(MainActivity.this, VideoDownloadActivity.class));
-                        return;
+//                    case "Video Downloader":
+//                        startActivity(new Intent(MainActivity.this, VideoDownloadActivity.class));
+//                        return;
                     case "Gallery":
                     {
                         String[] PERMISSIONS = {
-                                android.Manifest.permission.READ_EXTERNAL_STORAGE,
-                                android.Manifest.permission.WRITE_EXTERNAL_STORAGE
+                                READ_EXTERNAL_STORAGE,
+                                WRITE_EXTERNAL_STORAGE
                         };
 
                         if (Utilities.hasPermissions(MainActivity.this, PERMISSIONS)) {
@@ -294,7 +299,7 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         mProgressDialog.setMessage(getString(R.string.delete_prgs_msg));
 
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if (SDK_INT >= Build.VERSION_CODES.O) {
             NotificationUtils.createNotificationChannels(this);
         }
 
@@ -312,13 +317,14 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
         cardList.clear();
 
-        Card card=new Card("Post Saver",R.mipmap.repost,R.drawable.ic_instagram_black_256,R.color.colorOrange);
-        cardList.add(card);
 
-        card=new Card("Save Profile Picture",R.mipmap.crop,R.drawable.ic_instagram_black_256,R.color.colorYellow);
-        cardList.add(card);
 
-        card=new Card("Status Saver",R.mipmap.save_status,R.drawable.ic_whatsapp_black_256,R.color.colorGreen);
+//        Card card=new Card("Save Profile Picture",R.mipmap.crop,R.drawable.ic_instagram_black_256,R.color.colorYellow);
+//        cardList.add(card);
+//        card=new Card("Post Saver",R.mipmap.repost,R.drawable.ic_instagram_black_256,R.color.colorOrange);
+//        cardList.add(card);
+
+        Card card=new Card("Status Saver",R.mipmap.save_status,R.drawable.ic_whatsapp_black_256,R.color.colorGreen);
         cardList.add(card);
 
 //************ youtube *************** comment bellow code when upload to playstore
@@ -350,10 +356,10 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         intent.setData(Uri.parse("https://glofora.com/glofora-toolbox-all-in-one-media-toolbox.html"));
         startActivity(intent);
     }
-    public void openGithub(View view) {
+    public void openGlofora(View view) {
 
         Intent intent=new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse("https://github.com/lvamsavarthan/Media-Toolbox"));
+        intent.setData(Uri.parse("https://glofora.com"));
         startActivity(intent);
 
     }
@@ -386,25 +392,25 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 //                fm.beginTransaction().replace(R.id.framelayout, fragment).commit();
 //        }
 //        else
-        if (id==R.id.insta){
-            startActivity(new Intent(MainActivity.this,RepostActivity.class));
-        }
-        else if (id==R.id.insta){
-            startActivity(new Intent(MainActivity.this,RepostActivity.class));
-        }
-        else if(id==R.id.insta_recents){
-            startActivity(new Intent(MainActivity.this, RecentsActivity.class).putExtra("type","instagram"));
-
-        }
-        else if(id==R.id.insta_hd_profile_pic){
-            startActivity(new Intent(MainActivity.this, HDPictureActivity.class));
-
-        }
+//        if (id==R.id.insta){
+//            startActivity(new Intent(MainActivity.this,RepostActivity.class));
+//        }
+//        else if (id==R.id.insta){
+//            startActivity(new Intent(MainActivity.this,RepostActivity.class));
+//        }
+//        else if(id==R.id.insta_recents){
+//            startActivity(new Intent(MainActivity.this, RecentsActivity.class).putExtra("type","instagram"));
+//
+//        }
+//        else if(id==R.id.insta_hd_profile_pic){
+//            startActivity(new Intent(MainActivity.this, HDPictureActivity.class));
+//
+//        }
 //        else if(id==R.id.id_github){
 //           openGithub();
 //
 //        }
-        else if(id==R.id.id_website)
+         if(id==R.id.id_website)
         {
             openWebsite();
         }
@@ -433,15 +439,15 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
 
      if (id == R.id.gallery) {
             String[] PERMISSIONS = {
-                    android.Manifest.permission.READ_EXTERNAL_STORAGE,
-                    android.Manifest.permission.WRITE_EXTERNAL_STORAGE
+                    READ_EXTERNAL_STORAGE,
+                    WRITE_EXTERNAL_STORAGE
             };
 
             if (Utilities.hasPermissions(MainActivity.this, PERMISSIONS)) {
                 ShowPicker();
 
             } else {
-                ActivityCompat.requestPermissions(MainActivity.this, PERMISSIONS, PICKER_REQUEST_CODE);
+                requestPermission();
             }
         }
 
@@ -458,6 +464,27 @@ public class MainActivity extends AppCompatActivity  implements NavigationView.O
         return super.onOptionsItemSelected(item);
 
 
+    }
+    private void requestPermission() {
+//        if (SDK_INT >= Build.VERSION_CODES.R) {
+//            try {
+//                Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+//                intent.addCategory("android.intent.category.DEFAULT");
+//                intent.setData(Uri.parse(String.format("package:%s",getApplicationContext().getPackageName())));
+//                startActivityForResult(intent, 2296);
+//            } catch (Exception e) {
+//                Intent intent = new Intent();
+//                intent.setAction(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
+//                startActivityForResult(intent, 2296);
+//            }
+//        } else {
+            String[] PERMISSIONS = {
+                    READ_EXTERNAL_STORAGE,
+                    WRITE_EXTERNAL_STORAGE
+            };
+            //below android 11
+            ActivityCompat.requestPermissions(MainActivity.this, PERMISSIONS, PICKER_REQUEST_CODE);
+//        }
     }
 
 

@@ -118,10 +118,10 @@
                 android:id="@+id/download"
                 android:layout_gravity="center"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:text="Open Source Credits"
+                android:text="Explore Glofora.com"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="5dp"
-                android:onClick="openGithub"
+                android:onClick="openGlofora"
                 android:textColor="?android:textColorPrimary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>

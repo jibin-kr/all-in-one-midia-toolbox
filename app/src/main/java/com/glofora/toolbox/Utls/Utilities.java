@@ -38,6 +38,8 @@ import java.util.List;
 import needle.Needle;
 import needle.UiRelatedProgressTask;
 
+import static android.os.Build.VERSION.SDK_INT;
+
 public class Utilities {
 
     public static final String EXTRA_VIDEO_PATH = "EXTRA_VIDEO_PATH";
@@ -129,7 +131,7 @@ public class Utilities {
 //Used temporarily to get Uri references
 
 
-    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
+    if (SDK_INT < Build.VERSION_CODES.KITKAT) {
 
     } else {
         //Grant read Uri permissions to the intent
@@ -167,7 +169,7 @@ public class Utilities {
 //Used temporarily to get Uri references
         Uri shareFileUri;
 
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
+        if (SDK_INT < Build.VERSION_CODES.KITKAT) {
 
 
             //Create new instance of the ArrayList where the Uri will be stored
@@ -297,7 +299,7 @@ public class Utilities {
         ArrayList<Uri> uriArrayList = null;
 //This is important since we are sending multiple files
         final Intent sharingIntent = new Intent(Intent.ACTION_SEND_MULTIPLE);
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
+        if (SDK_INT < Build.VERSION_CODES.KITKAT) {
 
 
             //Create new instance of the ArrayList where the Uri will be stored
@@ -380,7 +382,7 @@ public class Utilities {
 
 
         //Broadcast the Media Scanner Intent to trigger it
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+        if (SDK_INT >= Build.VERSION_CODES.KITKAT) {
             Intent mediaScanIntent = new Intent(
                     Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
             Uri contentUri = Uri.fromFile(file.getAbsoluteFile());
@@ -558,13 +560,19 @@ public class Utilities {
      * @return {Boolean}
      */
     public static boolean hasPermissions(Context context, String... permissions) {
-        if (context != null && permissions != null) {
-            for (String permission : permissions) {
-                if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
-                    return false;
+//        if (SDK_INT >= Build.VERSION_CODES.R) {
+//            return Environment.isExternalStorageManager();
+//        }else {
+
+
+            if (context != null && permissions != null) {
+                for (String permission : permissions) {
+                    if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
+                        return false;
+                    }
                 }
             }
-        }
+//        }
         return true;
     }
 

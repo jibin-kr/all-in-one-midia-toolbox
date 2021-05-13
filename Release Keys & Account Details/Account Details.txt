@@ -1,0 +1,5 @@
+Keystore pwd
+Key Store pasword :glofora123
+alias :glofora
+
+glofora123

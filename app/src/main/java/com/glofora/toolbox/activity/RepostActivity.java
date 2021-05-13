@@ -554,8 +554,13 @@ public class RepostActivity extends AppCompatActivity {
             thumbnails.clear();
             img_urls.clear();
             HttpHandler sh = new HttpHandler();
+            Log.e(TAG, "iNSTAGRAM url: " + URL);
             String jsonStr = sh.makeServiceCall(URL);
             Log.e(TAG, "Response from url: " + jsonStr);
+            if(jsonStr.contains("Login • Instagram")){
+                jsonStr=null;
+            }
+
 
             if (jsonStr != null) {
                 try {
@@ -594,8 +599,10 @@ public class RepostActivity extends AppCompatActivity {
 
                     JSONArray edges1 = null;
                     try {
-                        JSONObject edge_sidecar_to_children = shortcode_media.getJSONObject("edge_sidecar_to_children");
-                        edges1 = edge_sidecar_to_children.getJSONArray("edges");
+                        if(shortcode_media.has("edge_sidecar_to_children")) {
+                            JSONObject edge_sidecar_to_children = shortcode_media.getJSONObject("edge_sidecar_to_children");
+                            edges1 = edge_sidecar_to_children.getJSONArray("edges");
+                        }
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -690,7 +697,7 @@ public class RepostActivity extends AppCompatActivity {
                 Log.e(TAG, "Couldn't get json from server.");
                 runOnUiThread(() -> {
                     Toast.makeText(getApplicationContext(),
-                            "Couldn't get post, maybe the account is private.",
+                            "NOT WORKING ANYMORE , Seems like That api endpoint is Instagram's private URL, created to be used only by Instagram app/web not for public",
                             Toast.LENGTH_LONG)
                             .show();
                     repostList=new ArrayList<>();

@@ -36,7 +36,9 @@ public class NotificationUtils {
         NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(mContext);
 
         mBuilder = new NotificationCompat.Builder(mContext, "download_channel");
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            createNotificationChannels(mContext);
+        }
         Notification notification;
         NotificationCompat.BigTextStyle bigTextStyle = new NotificationCompat.BigTextStyle();
         bigTextStyle.setBigContentTitle(title);

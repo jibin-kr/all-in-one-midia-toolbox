@@ -1,28 +1,28 @@
-Glofora Toolbox | All in one media tookit
+Glofora Toolbox | All-in-one media toolkit
 -----------------------------------------------
-Glofora Toolbox application can Download Instagram videos, Images & HD Profile Picture.
+The Glofora Toolbox application enables you to download Instagram videos, images, and HD profile pictures.
 
-Main features Glofora Toolbox Instagram Downloader:
+Key features of Glofora Toolbox Instagram Downloader:
 
-# Easy download images , Video & Profile picture from instagram
-# Use it instantly without log in.
-# You can download videos & Images from instagram by sharing story links to Glofora Toolsapplication.
+# Easily download images, videos, and profile pictures from Instagram
+# Instant use without the need to log in
+# Download videos and images from Instagram by sharing story links with the Glofora Toolbox application
 # Download Videos from IGTV
-# Fast Download Speed
-# Download notification
-# Download multiple videos at a time
-# Small size & Light weight
+# High download speed
+# Download notifications
+# Download multiple videos simultaneously
+# Compact size and lightweight
 
-In App Gallery
+In-App Gallery
 -----------------------
 
-In app gallery allows user to view, share and play saved statuses, splitted videos and downloaded Instagram stories without using other gallery applications.
+The in-app gallery allows users to view, share, and play saved statuses, split videos, and downloaded Instagram stories without requiring additional gallery applications.
 
-Glofora Toolbox App having 6 Main features:
+Glofora Toolbox App offers 6 main features:
 -----------------------------------------------------------
-1 :  Save whatsapp statuses
-2 :  Dowmload Instagram Stories
-3 :  Instagram HD Profile picture Download
-4 :  View recent instagram stories
-5 :  Video Splitter (Longer Stories)
-6 :  In App Gallery
+1: Save WhatsApp statuses
+2: Download Instagram Stories
+3: Download Instagram HD Profile pictures
+4: View recent Instagram stories
+5: Video Splitter for longer stories
+6: In-App Gallery

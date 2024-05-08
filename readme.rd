@@ -1,28 +1,42 @@
-Glofora Toolbox | All in one media tookit
------------------------------------------------
-Glofora Toolbox application can Download Instagram videos, Images & HD Profile Picture.
+# Glofora Toolbox - All-in-One Media Toolkit
 
-Main features Glofora Toolbox Instagram Downloader:
+## Introduction
+Welcome to the Glofora Toolbox, your ultimate media toolkit for managing Instagram content and WhatsApp statuses. Our application allows you to download Instagram videos, images, and HD profile pictures with ease and efficiency.
 
-1 Easy download images , Video & Profile picture from instagram
-2 Use it instantly without log in.
-3 You can download videos & Images from instagram by sharing story links to Glofora Toolsapplication.
-4 Download Videos from IGTV
-5 Fast Download Speed
-6 Download notification
-7 Download multiple videos at a time
-8 Small size & Light weight
+## Key Features
+- **Instant Downloads**: Get images, videos, and profile pictures from Instagram without the need to log in.
+- **Story Link Sharing**: Directly download content by sharing Instagram story links to the Glofora Toolbox.
+- **IGTV Access**: Download videos from Instagram TV.
+- **High-Speed Downloads**: Experience fast download speeds for all your media.
+- **Notifications**: Stay updated with download notifications.
+- **Bulk Downloads**: Download multiple videos simultaneously.
+- **Compact Size**: A lightweight application that won't burden your device.
 
-In App Gallery
------------------------
+## In-App Gallery
+Our in-app gallery feature allows you to:
+- View, share, and play saved WhatsApp statuses.
+- Play split videos and downloaded Instagram stories.
+- Manage your media without the need for other gallery apps.
 
-In app gallery allows user to view, share and play saved statuses, splitted videos and downloaded Instagram stories without using other gallery applications.
+## Comprehensive Tools
+Glofora Toolbox comes packed with six main tools:
+1. **WhatsApp Status Saver**: Save your favorite WhatsApp statuses.
+2. **Instagram Story Downloader**: Download Instagram stories with a single tap.
+3. **HD Profile Picture Downloader**: Get high-resolution profile pictures from Instagram.
+4. **Recent Story Viewer**: Catch up with the latest Instagram stories.
+5. **Video Splitter**: Split longer videos into Instagram story-friendly segments.
+6. **Integrated Gallery**: Access all your downloaded and split content within the app.
 
-Glofora Toolbox App having 6 Main features:
------------------------------------------------------------
-1 :  Save whatsapp statuses
-2 :  Dowmload Instagram Stories
-3 :  Instagram HD Profile picture Download
-4 :  View recent instagram stories
-5 :  Video Splitter (Longer Stories)
-6 :  In App Gallery
+## Getting Started
+To start using Glofora Toolbox, simply download the app from the official website or your preferred app store.
+
+## Contributions
+We welcome contributions to the Glofora Toolbox. If you have ideas or improvements, please fork the repository and submit a pull request.
+
+## License
+Glofora Toolbox is released under the MIT License.
+
+## Support
+For support, feature requests, or any queries, please open an issue in this repository.
+
+Thank you for choosing Glofora Toolbox as your go-to media toolkit!

@@ -1,27 +1,28 @@
-# Glofora Toolbox: Your All-in-One Media Toolkit
+Glofora Toolbox | All in one media tookit
+-----------------------------------------------
+Glofora Toolbox application can Download Instagram videos, Images & HD Profile Picture.
 
-![Glofora Toolbox Logo](https://example.com/path/to/logo.png)
+Main features Glofora Toolbox Instagram Downloader:
 
-Glofora Toolbox is a versatile application that simplifies media management. Whether you're an Instagram enthusiast or a WhatsApp user, this app has you covered. Let's explore its main features:
+# Easy download images , Video & Profile picture from instagram
+# Use it instantly without log in.
+# You can download videos & Images from instagram by sharing story links to Glofora Toolsapplication.
+# Download Videos from IGTV
+# Fast Download Speed
+# Download notification
+# Download multiple videos at a time
+# Small size & Light weight
 
-## Instagram Downloader:
-- **Download Instagram Images, Videos, and HD Profile Pictures:**
-  - Easily save media from Instagram without the need to log in.
-  - Share story links directly with Glofora Toolbox to download videos and images.
-  - Download videos from IGTV.
-  - Enjoy fast download speeds and receive notifications.
-  - Download multiple videos simultaneously.
-  - The app is lightweight and efficient.
+In App Gallery
+-----------------------
 
-## In-App Gallery:
-- **View, Share, and Play Saved Content:**
-  - Glofora Toolbox's in-app gallery allows you to:
-    - View WhatsApp statuses.
-    - Download Instagram stories.
-    - Access HD profile pictures.
-    - Explore recent Instagram stories.
-    - Split longer stories using the video splitter feature.
-    - Enjoy a seamless experience without relying on external gallery apps.
+In app gallery allows user to view, share and play saved statuses, splitted videos and downloaded Instagram stories without using other gallery applications.
 
-Glofora Toolbox truly brings convenience to your media management needs. Give it a try and enhance your Instagram and WhatsApp experience!
-
+Glofora Toolbox App having 6 Main features:
+-----------------------------------------------------------
+1 :  Save whatsapp statuses
+2 :  Dowmload Instagram Stories
+3 :  Instagram HD Profile picture Download
+4 :  View recent instagram stories
+5 :  Video Splitter (Longer Stories)
+6 :  In App Gallery

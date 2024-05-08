@@ -4,14 +4,14 @@ Glofora Toolbox application can Download Instagram videos, Images & HD Profile P
 
 Main features Glofora Toolbox Instagram Downloader:
 
-# Easy download images , Video & Profile picture from instagram
-# Use it instantly without log in.
-# You can download videos & Images from instagram by sharing story links to Glofora Toolsapplication.
-# Download Videos from IGTV
-# Fast Download Speed
-# Download notification
-# Download multiple videos at a time
-# Small size & Light weight
+1 Easy download images , Video & Profile picture from instagram
+2 Use it instantly without log in.
+3 You can download videos & Images from instagram by sharing story links to Glofora Toolsapplication.
+4 Download Videos from IGTV
+5 Fast Download Speed
+6 Download notification
+7 Download multiple videos at a time
+8 Small size & Light weight
 
 In App Gallery
 -----------------------
